@@ -23,7 +23,7 @@ function resolveTwigEntry() {
 			new HtmlWebpackPlugin({
 				inject: true,
 				chunks: [nameWithoutExt],
-				filename: `/tpl/${nameWithoutExt}.html`,
+				filename: `/${nameWithoutExt}.html`,
 				template: `./src/tpl/${nameWithoutExt}.twig`,
 			}),
 		);

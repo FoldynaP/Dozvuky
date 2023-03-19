@@ -14,22 +14,23 @@ Includes the following features...
 
 ## Usage
 
-Run Dev Server (Port 3000)
+Run Dev Server (Port 8080)
 
 ```
   npm run dev
 ```
 
-## Build for production
+## Build
 
 ```
 npm run build
 ```
+## Build for production
+
+```
+npm run build:pro
+```
 
 ## Demo App
 
-The demo app is a very simple Joke generator. Replace with your own code and install other packages as needed
-
-- index.js (main javascript)
-- template.html (template)
-- styles/main.scss (styles)
+This website was made by Petr Foldyna.
