@@ -72,6 +72,7 @@ const mediaQueries = {
 		md: '750px',
 		lg: '1000px',
 		xl: '1200px',
+		xxl: '1600px'
 	},
 	rules: {
 		webkit: '(-webkit-min-device-pixel-ratio: 0)',
