@@ -1,0 +1,26 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+:first-child {
+	margin-top: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+/* stylelint-disable no-invalid-position-at-import-rule, comment-empty-line-before */
+@import 'header';
+@import 'footer';
+@import 'main';

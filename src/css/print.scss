@@ -1,0 +1,33 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/extends';
+@import 'base/normalize';
+@import 'utilities/index';
+@import 'print/index';
+body {
+	width: 100%;
+	background: none;
+	color: $colorBlack;
+	font-family: $fontSystem;
+	font-size: 8pt;
+	line-height: 12pt;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+p,
+ul,
+table {
+	margin: 0 0 0.4cm;
+}
+a {
+	color: $colorBlack;
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}

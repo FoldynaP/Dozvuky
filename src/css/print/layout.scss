@@ -1,0 +1,20 @@
+.header {
+	margin: 0 auto 20pt;
+	padding: 0 0 20pt;
+	border-bottom: 2pt solid $colorBlack;
+	&__logo {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		font-size: 100%;
+		line-height: 1;
+		img {
+			border: 0;
+		}
+	}
+}
+.footer {
+	margin: 20pt 0 0;
+	padding: 20pt 0 0;
+	border-top: 2pt solid $colorBlack;
+}

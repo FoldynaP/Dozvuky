@@ -1,0 +1,39 @@
+%inp {
+	display: block;
+	width: 100%;
+	padding: 11px 11px 12px 11px;
+	border: 1px solid $colorBd;
+	border-width: 0 0 1px 0;
+	border-radius: 0;
+	background-color: transparent;
+	color: $colorText;
+	font-size: 16px;
+	line-height: 1.5;
+	transition: background-color $t, border $t;
+	appearance: none;
+
+	// STATEs
+/*
+	&:not(:placeholder-shown):valid {
+		border-color: green;
+	} */
+	&:not(:placeholder-shown):not(:focus) {
+		border-color: $colorBlack;
+		color: $colorBlack;
+	}
+	&:disabled {
+		background-color: $colorBg;
+	}
+	&:focus {
+		border-bottom-width: 2px;
+		border-color: $colorText;
+		background-color: $colorWhite;
+		caret-color: $colorPrimary;
+	}
+	&:focus-visible {
+		outline: 0;
+	}
+	.has-error & {
+		border-color: $colorRed;
+	}
+}

@@ -1,0 +1,211 @@
+html {
+	color: $colorText;
+	font-family: $fontPrimary;
+	font-size: $fontSize;
+	line-height: $lineHeight;
+}
+
+// Headings
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin: 1.5em 0 0.5em;
+	font-family: $fontSecondary;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+h1,
+.h1 {
+	font-size: 35px;
+	color: $colorPrimary;
+}
+h2,
+.h2 {
+	font-size: 28px;
+	color: $colorPrimary;
+}
+h3,
+.h3 {
+	font-size: 24px;
+	color: $colorPrimary;
+	line-height: 1.3;
+}
+h4,
+.h4 {
+	font-size: 20px;
+	line-height: 1.3;
+}
+h5,
+.h5 {
+	font-size: 20px;
+	line-height: 1.3;
+	text-transform: none;
+}
+h6,
+.h6 {
+	font-size: 17px;
+	text-transform: none;
+}
+
+// Paragraph
+p {
+	margin: 0 0 $typoSpaceVertical;
+}
+hr {
+	height: 1px;
+	margin: $typoSpaceVertical 0;
+	border: solid $colorBd;
+	border-width: 1px 0 0;
+	overflow: hidden;
+}
+
+// Blockquote
+blockquote {
+	margin: 0 0 $typoSpaceVertical;
+	padding: 0;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+// Links
+a {
+	color: $colorPrimary;
+	text-decoration: underline;
+	transition: color $t;
+	-webkit-tap-highlight-color: transparent;
+	.hoverevents &:hover {
+		color: $colorPrimary;
+		text-decoration: none;
+	}
+}
+
+// Lists
+ul,
+ol,
+dl {
+	margin: 0 0 $typoSpaceVertical;
+	padding: 0;
+	list-style: none;
+}
+li {
+	margin: 0 0 calc($typoSpaceVertical / 4);
+	padding: 0 0 0 20px;
+}
+ul {
+	li {
+		background-image: url($svgBullet);
+		background-position: 5px 0.5em;
+		background-repeat: no-repeat;
+		background-size: 4px 4px;
+	}
+}
+ol {
+	counter-reset: item;
+	li {
+		position: relative;
+		&::before {
+			content: counter(item) '.';
+			counter-increment: item;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	ol {
+		li {
+			&::before {
+				content: counter(item, lower-alpha) '.';
+			}
+		}
+	}
+}
+dt {
+	margin: 0;
+	font-weight: bold;
+}
+dd {
+	margin: 0 0 calc($typoSpaceVertical / 2);
+	padding: 0;
+}
+
+// Tables
+table {
+	clear: both;
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	width: 100%;
+	margin: 0 0 $typoSpaceVertical;
+	border: 1px solid $colorBd;
+}
+caption {
+	padding: 0 0 10px;
+	font-weight: bold;
+	text-align: left;
+	caption-side: top;
+}
+td,
+th {
+	vertical-align: top;
+	padding: 15px 20px;
+	border: 1px solid $colorBd;
+}
+th {
+	font-weight: bold;
+	text-align: left;
+}
+thead th {
+	background: $colorBg;
+}
+
+// Image
+figure {
+	margin-bottom: $typoSpaceVertical;
+}
+figcaption {
+	margin-top: 0.5em;
+}
+img {
+	@media ($xlDown) {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media ($lgUp) {
+	h1, .h1 {
+		line-height: 1.1;
+		font-size: 56px;
+	}
+	h2, .h2 {
+		line-height: 1.2;
+		font-size: 36px;
+	}
+	h3, .h3 {
+		line-height: 1.3;
+		font-size: 28px;
+	}
+	h4, .h4 {
+		line-height: 1.3;
+		font-size: 24px;
+	}
+	h5, .h5 {
+		line-height: 1.3;
+		font-size: 21px;
+	}
+	h5, .h5 {
+		line-height: 1.3;
+		font-size: 18px;
+	}
+}

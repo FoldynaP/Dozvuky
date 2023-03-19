@@ -1,0 +1,13 @@
+// Examples
+
+// Single value with MQ
+// @include generateSpacingMQ(value, 'className', 'styleProperty', 'unit');
+// @include generateSpacingMQ(40, '.u-pt-', 'padding-top', 'px');
+
+// Values from 0 to value by steps without MQ
+// @include generateSpacingSteps(value, step, 'className', 'styleProperty', 'unit');
+// @include generateSpacingSteps(100, 20, '.u-mb-', 'margin-bottom', 'px');
+
+// Values from 0 to value by steps with MQ
+// @include generateSpacingStepsMQ(value, step, 'className', 'styleProperty', 'unit');
+// @include generateSpacingStepsMQ(50, 10, '.u-mb-', 'margin-bottom', 'px');

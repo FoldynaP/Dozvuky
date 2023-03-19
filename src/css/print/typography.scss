@@ -1,0 +1,50 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	line-height: 1.2;
+}
+h1 {
+	margin: 0 0 0.5cm;
+	font-size: 22pt;
+}
+h2 {
+	margin: 0.75cm 0 0.2cm;
+	font-size: 18pt;
+}
+h3 {
+	margin: 0.5cm 0 0.15cm;
+	font-size: 14pt;
+}
+h4,
+h5,
+h6 {
+	margin: 1cm 0 0.5cm;
+	font-size: 12pt;
+}
+blockquote {
+	margin: 0.5cm 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+table {
+	border-collapse: collapse;
+	width: 98% !important; // stylelint-disable-line declaration-no-important
+	margin: 15px 1pt 35px;
+	font-size: 8pt;
+	text-align: left;
+}
+tr {
+	page-break-inside: avoid;
+}
+th,
+td {
+	padding: 4px 10px;
+	border: 1pt solid $colorBlack;
+}
+th {
+	font-weight: bold;
+}

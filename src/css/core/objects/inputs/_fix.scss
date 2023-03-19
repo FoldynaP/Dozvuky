@@ -1,0 +1,15 @@
+.inp-fix {
+	position: relative;
+	display: block;
+
+	// STATEs
+	.has-error & {
+		color: $colorRed;
+	}
+	.has-warning & {
+		color: $colorOrange;
+	}
+	.has-ok & {
+		color: $colorGreen;
+	}
+}

@@ -1,0 +1,11 @@
+.u-color {
+	&-primary {
+		color: $colorPrimary;
+	}
+	&-secondary {
+		color: $colorSecondary;
+	}
+	&-white {
+		color: $colorWhite;
+	}
+}

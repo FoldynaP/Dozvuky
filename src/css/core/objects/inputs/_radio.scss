@@ -1,0 +1,51 @@
+.inp-radio {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	margin-bottom: 21px;
+	span {
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		padding-top: 3px;
+	}
+	input[type="radio"] {
+		appearance: none;
+		background: none;
+		position: relative;
+		margin: 0;
+		cursor: pointer;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		border: 2px solid $colorBlack;
+		transition: border $t, background-color $t, background-image $t;
+		&:disabled {
+			background-color: $colorWhite;
+			border-color: $colorBlack20;
+			cursor: not-allowed;
+		}
+		&:checked {
+			background-color: $colorPrimary;
+			border-color: $colorPrimary;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -7px 0 0 -7px;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				border: 2px solid $colorWhite;
+				pointer-events: none;
+			}
+		}
+	}
+	.hoverevents &:hover {
+		input[type="radio"]:not(:checked):not(:disabled) {
+			border-color: $colorPrimary;
+			background-color: $colorWhite;
+		}
+	}
+}

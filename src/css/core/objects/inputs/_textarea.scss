@@ -1,0 +1,4 @@
+.inp-textarea {
+	@extend %inp;
+	resize: vertical;
+}
