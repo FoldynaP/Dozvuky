@@ -2,6 +2,7 @@
 import * as accordion from './components/accordion';
 import * as menu from './components/menu';
 import * as hero from './components/hero';
+import * as embla from './components/embla';
 
 // content load components
 const componentsload = [];
@@ -10,7 +11,8 @@ const componentsload = [];
 const components = [
 	accordion,
 	menu,
-	hero
+	hero,
+	embla
 ].concat(componentsload);
 window.App = {
 	run() {

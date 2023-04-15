@@ -54,6 +54,7 @@
 	}
 }
 %reset-anchor {
+	text-decoration: none;
 	.hoverevents &:hover {
 		color: unset;
 	}

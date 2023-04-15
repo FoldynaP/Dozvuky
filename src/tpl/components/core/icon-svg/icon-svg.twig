@@ -1,0 +1,34 @@
+{# Usage:
+	{% include '@components/core/icon-svg/icon-svg.twig' with {
+		props: {
+			name: 'beach-pebble'
+		}
+	} %}
+#}
+
+{# ClassName #}
+{% set className = [
+	'icon-svg',
+	props.name ? 'icon-svg--' ~ props.name : null,
+	props.modifier ? props.modifier : null
+] | filter(i => i) | join(' ') %}
+
+{# Code #}
+<span class="{{ className }}" aria-hidden="true">
+	<svg
+		class="icon-svg__svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+	>
+		<use
+			xlink:href="{{ assets.images ~ ('bg/icons-svg.svg#icon-' ~ props.name) }}"
+			width="100%"
+			height="100%"
+			focusable="false"
+		></use>
+	</svg>
+</span>
+{% if props.alt %}
+	<span class="u-vhide">
+		{{ props.alt }}
+	</span>
+{% endif %}

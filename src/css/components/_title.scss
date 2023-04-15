@@ -1,6 +1,7 @@
 .title {
     text-align: center;
     position: relative;
+    margin-bottom: 20px;
 
     &__text {
         position: relative;
@@ -23,5 +24,8 @@
     &__text:before {
         margin-left: -50%;
         text-align: right;
+    }
+    @media ($mdUp) {
+        margin-bottom: 32px;
     }
 }

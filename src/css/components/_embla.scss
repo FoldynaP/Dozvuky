@@ -1,0 +1,11 @@
+.embla__button {
+    border: 0;
+    outline: 0;
+    border: 2px solid $colorWhite;
+    border-radius: 50%;
+    display: inline;
+    &-inner {
+        outline: 0;
+        border: 0;
+    }
+}
