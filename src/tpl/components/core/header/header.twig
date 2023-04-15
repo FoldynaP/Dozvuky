@@ -1,3 +1,19 @@
-<div class="header">
-    <h2>TEST HEADER</h2>
-</div>
+<header class="header js-menu">
+    <nav class="header__wrap">
+        <div class="header__logo">
+        {% include "@components/core/image/image.twig" with { item: {
+            img: props.logo
+        }} %}
+        </div>
+        <ul class="header__list js-menu-content">
+            {% for item in props.items %}
+            <li class="header__item"><a href="{{ item.link }}" class="header__link">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <button type="button" class="header__toggle js-menu-btn" aria-label="Menu ">
+			<span class="header__toggle-ico">
+				<span></span><span></span><span></span>
+			</span>
+		</button>
+    </nav>
+</header>

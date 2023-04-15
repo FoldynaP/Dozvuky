@@ -1,0 +1,32 @@
+<figure class="image{% if item.modify %} {{item.modify}}{% endif %}{% if item.contain %} image--contain{% endif %}">
+	{% if item.img %}
+		<picture>
+			{% if item.imgAvifpLg %}
+			<source srcset="{{ assets.images }}illust/{{item.imgAvifLg}}{% if item.imgAvifLg2x %}, {{ assets.images}}illust/{{item.imgAvifLg2x}} 2x{% endif %}" type="image/webp" media="(min-width: 1000px)">
+			{% endif %}
+			{% if item.imgWebpLg %}
+			<source srcset="{{ assets.images }}illust/{{item.imgWebpLg}}{% if item.imgWebpLg2x %}, {{ assets.images}}illust/{{item.imgWebpLg2x}} 2x{% endif %}" type="image/webp" media="(min-width: 1000px)">
+			{% endif %}
+			{% if item.imgLg %}
+				<source srcset="{{ assets.images }}illust/{{item.imgLg}}{% if item.imgLg2x %}, {{ assets.images}}illust/{{item.imgLg2x}} 2x{% endif %}" type="image/jpg" media="(min-width: 1000px)">
+			{% endif %}
+			{% if item.imgAvifMd %}
+			<source srcset="{{ assets.images }}illust/{{item.imgAvifMd}}{% if item.imgAvifMd2x %}, {{ assets.images}}illust/{{item.imgAvifMd2x}} 2x{% endif %}" type="image/webp" media="(min-width: 575px)">
+			{% endif %}
+			{% if item.imgWebpMd %}
+			<source srcset="{{ assets.images }}illust/{{item.imgWebpMd}}{% if item.imgWebpMd2x %}, {{ assets.images}}illust/{{item.imgWebpMd2x}} 2x{% endif %}" type="image/webp" media="(min-width: 575px)">
+			{% endif %}
+			{% if item.imgMd %}
+				<source srcset="{{ assets.images }}illust/{{item.imgMd}}{% if item.imgMd2x %}, {{ assets.images}}illust/{{item.imgMd2x}} 2x{% endif %}" type="image/jpg" media="(min-width: 575px)">
+			{% endif %}
+			{% if item.imgAvif %}
+				<source srcset="{{ assets.images }}illust/{{item.imgAvif}}{% if item.imgAvif2x %}, {{ assets.images}}illust/{{item.imgAvif2x}} 2x{% endif %}" type="image/avif">
+			{% endif %}
+			{% if item.imgWebp %}
+			<source srcset="{{ assets.images }}illust/{{item.imgWebp}}{% if item.imgWebp2x %}, {{ assets.images}}illust/{{item.imgWebp2x}} 2x{% endif %}" type="image/webp">
+			{% endif %}
+			<source srcset="{{ assets.images}}illust/{{item.img}}{% if item.img2x %}, {{ assets.images}}illust/{{item.img2x}} 2x{% endif %}" >
+			<img src="{{ assets.images }}/illust/{{ item.img}}" alt="">
+		</picture>
+	{% endif %}
+</figure>

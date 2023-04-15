@@ -1,0 +1,16 @@
+.section {
+	&--top {
+		padding-top: 60px;
+	}
+	&--bottom {
+		margin-bottom: 60px;
+	}
+	@media ($xlUp) {
+		&--top {
+			padding-top: 80px;
+		}
+		&--bottom {
+			margin-bottom: 80px;
+		}
+	}
+}

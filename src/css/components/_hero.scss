@@ -1,0 +1,50 @@
+.hero {
+    margin-top: -67px;
+    position: relative;
+    min-height: 500px;
+    &__slides {
+        display: flex;
+    }
+    &__img {
+        min-height: 500px;
+        width: 100%;
+        margin-left: -100%;
+        opacity: 0;
+        transition: opacity 1s;
+        &.is-active {
+            // margin-left: -100%;
+            opacity: 1;
+            margin-left: 0;
+        }
+    }
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__timeline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $colorSecondary;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+
+        .is-sliding & {
+            animation: scale linear forwards;
+            animation-duration: var(--slide-duration);
+        }
+    }
+    @media ($mdUp) {
+        max-height: 800px;
+        &__img {
+            max-height: 800px;
+            & .image img {
+                aspect-ratio: 16/9;
+            }
+        }
+    }
+}

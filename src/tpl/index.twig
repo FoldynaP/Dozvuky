@@ -1,75 +1,43 @@
 {% extends '@layout/layout.twig' %}
-{% set pageTitle = 'Crossroad of HTML templates' %}
+{% set pageTitle = 'Dozvuky léta' %}
+{% set description = 'Domovská stránka festivalu dozvuky léta, konající se v České Třebové' %}
+
 
 {% block content %}
 
-	{% set components = [
-		{
-			link: '00-layout.html',
-			linkText: 'Layout',
-			number: '00'
-		},
-	] %}
-	{% set basic = [
-		{
-			link: '00-icons.html',
-			linkText: 'SVG Icons',
-			number: '00'
-		},
-	] %}
-	{% set pages = [
-		{
-			link: '01-homepage.html',
-			linkText: 'Page test',
-			number: '01'
-		},
-		{
-			link: '02-spielplan.html',
-			linkText: 'Spielplan',
-			number: '02'
-		},
-	] %}
-
-
 	<main role="main" id="main" class="main">
-		<div class="container">
-			<h1>Crossroad of HTML templates</h1>
-			<h2>Basic styles</h2>
-			<ul>
-				{% for item in basic %}
-					<li>
-						<a href="{{ item.link }}">00 -
-							{{ item.linkText }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-			<h2>Components</h2>
-			<ul>
-				{% for item in components %}
-					<li>
-						<a href="{{item.link}}">{{item.number}}
-							-
-							{{item.linkText}}</a>
-						{% if item.ready %}
-							&nbsp;&nbsp;<span style="margin-left: 10px;" class="tag">BE ready</span>
-						{% endif %}
-
-					</li>
-				{% endfor %}
-			</ul>
-			<h2>Page Templates</h2>
-			<ul>
-				{% for item in pages %}
-					<li>
-						<a href="{{item.link}}">{{item.number}} - {{item.linkText}}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-		<div class="form" style="max-height: fit-content">
-			<div id="part"></div>
-		</div>
-
-	</main>
+		{% include "@components/box/hero/hero.twig" with { props: {
+            timeInterval: "8000",
+            images: [
+                {
+                    img: "hero/Waldagang1.jpg",
+                    alt: "úvodní fotka dozvuků léta",
+                },
+                {
+                    img: "hero/publikum.jpg",
+                    alt: "publikum",
+                }
+            ]
+        }}%}
+        <section class="section section--top section--bottom">
+            <div class="container">
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Kapely",
+                    tag: "h2",
+                }} %}
+                <p class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda, ducimus optio rerum distinctio, ratione neque, voluptatem amet necessitatibus! Aspernatur illo, quae assumenda voluptatem numquam temporibus, ex sit quod voluptate dolore iste repudiandae est! Minima, deserunt quod! Architecto, explicabo! Molestias, consequuntur quae iure saepe molestiae odit? Itaque, enim sint! Corrupti, voluptatum veritatis. Quis ipsam reprehenderit nam repudiandae quae consequuntur, aperiam, explicabo deserunt vel, tempora impedit porro aliquid! Ut, amet mollitia libero accusantium voluptas fuga quia aliquid et numquam laborum voluptate ratione provident, ab iure voluptatibus dolor sit iste doloribus.</p>
+            </div>
+        </section>
+        <section class="section section--top section--bottom">
+            <div class="container">
+                <p class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda, ducimus optio rerum distinctio, ratione neque, voluptatem amet necessitatibus! Aspernatur illo, quae assumenda voluptatem numquam temporibus, ex sit quod voluptate dolore iste repudiandae est! Minima, deserunt quod! Architecto, explicabo! Molestias, consequuntur quae iure saepe molestiae odit? Itaque, enim sint! Corrupti, voluptatum veritatis. Quis ipsam reprehenderit nam repudiandae quae consequuntur, aperiam, explicabo deserunt vel, tempora impedit porro aliquid! Ut, amet mollitia libero accusantium voluptas fuga quia aliquid et numquam laborum voluptate ratione provident, ab iure voluptatibus dolor sit iste doloribus.</p>
+            </div>
+        </section>
+        <section class="section section--top section--bottom" id="tickets">
+            <div class="container">
+                <p class="u-text-center">Lístky</p>
+            </div>
+        </section>
+	</main> 
 
 {% endblock %}

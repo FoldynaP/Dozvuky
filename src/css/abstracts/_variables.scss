@@ -1,11 +1,12 @@
 // Colors
 $colorPrimary: #e30613;
-$colorSecondary: #ae0f0a;
+$colorSecondary: #00a657d9;
 $colorTerciary: #8c0005;
 $gradientPrimary: linear-gradient(180deg, $colorSecondary, $colorTerciary);
 $colorBlack: #000000;
 $colorGrey: #a5a5a5;
 $colorWhite: #ffffff;
+$colorText: #ffffff;
 
 $colorBlack80: #333333;
 $colorBlack60: #666666;
@@ -22,7 +23,7 @@ $colorYellow: #ffcc01;
 $colorBlue: #151e3b;
 $colorGold: #ac8543;
 
-$colorText: $colorBlack;
+$colorText: $colorWhite;
 $colorBd: #dddddd;
 $colorBg: #eeeeee;
 $colorLink: $colorPrimary;

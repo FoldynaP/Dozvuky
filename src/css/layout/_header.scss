@@ -1,0 +1,109 @@
+.header {
+    position: relative;
+    margin-bottom: -70px;
+    z-index: 10;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
+    backdrop-filter: blur(10px);
+    .menu-open & {
+        background-color: $colorSecondary
+    }
+    &__list {
+        @extend %reset-ul;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: $colorWhite;
+        transform: translateX(100%);
+        transition: transform $t;
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+    &__wrap {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        & img {
+            max-height: 40px;
+        }
+    }
+    &__item {
+        @extend %reset-ul-li;
+    }
+    &__link {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        color: $colorBlack;
+    }
+    &__toggle {
+		height: 100%;
+		border: none;
+		background: none;
+		outline: 0;
+		cursor: pointer;
+		padding: 0;
+	}
+	&__toggle-ico {
+		span {
+			position: relative;
+			display: block;
+			width: 30px;
+			height: 3px;
+			background-color: $colorText;
+			transition: transform 0.2s ease-in-out;
+            border-radius: 3px;
+			.menu-open & {
+				height: 3px;
+			}
+		}
+		span:last-child {
+			.menu-open & {
+                top: -3px;
+				transform: rotate(-45deg);
+			}
+		}
+		span:first-child {
+			.menu-open & {
+				transform: rotate(45deg);
+			}
+		}
+		span:nth-child(2) {
+			//width: 17px;
+			margin: 7px auto;
+			.menu-open & {
+				display: none;
+			}
+		}
+	}
+    @media ($lgUp) {
+        &__list {
+            justify-content: flex-end;
+            flex-direction: row;
+            transform: translateX(0);
+            position: relative;
+            top: unset;
+            background-color: unset;
+            height: initial;
+            width: initial;
+        }
+        &__link {
+            color: $colorText;
+        }
+        &__toggle {
+            display: none;
+        }
+    }
+}

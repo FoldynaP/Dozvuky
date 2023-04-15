@@ -53,3 +53,8 @@
 		}
 	}
 }
+%reset-anchor {
+	.hoverevents &:hover {
+		color: unset;
+	}
+}

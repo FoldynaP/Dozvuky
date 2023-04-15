@@ -1,0 +1,14 @@
+.footer {
+    background: url($imgPath + '/bg/black-pattern.jpg');
+    background-size: cover;
+    &__copyright {
+        color: $colorWhite;
+        margin-bottom: 0;
+        ul {
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 0;
+        }
+    }
+}

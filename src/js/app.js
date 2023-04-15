@@ -1,11 +1,17 @@
 // Components
 import * as accordion from './components/accordion';
+import * as menu from './components/menu';
+import * as hero from './components/hero';
 
 // content load components
 const componentsload = [];
 
 // once delegated components
-const components = [accordion].concat(componentsload);
+const components = [
+	accordion,
+	menu,
+	hero
+].concat(componentsload);
 window.App = {
 	run() {
 		const target = document;

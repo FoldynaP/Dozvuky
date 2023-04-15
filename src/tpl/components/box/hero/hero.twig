@@ -1,0 +1,20 @@
+{% set timeIntervalCss = props.timeInterval/1000 %}
+<div class="hero js-hero" data-interval="{{ props.timeInterval }}">
+    <div class="hero__slides">
+        {% for item in props.images %}
+        <div class="hero__img js-hero-slide {% if loop.first %}is-active{% endif %}">
+            {% include "@components/core/image/image.twig" with { item: {
+                img: item.img
+            }} %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="hero__content">
+        <h1>Dozvuky Léta 2023</h1>
+        <div class="button-wrapper" data-tippy-content="Click to copy button 49">
+          <a href="#tickets" class="btn-glitch" role="button"><span class="btn-glitch__text">Chci lístek</span></a>
+        </div>
+    </div>
+    <div class="hero__timeline" style="--slide-duration: {{timeIntervalCss}}s;">
+    </div>
+</div>

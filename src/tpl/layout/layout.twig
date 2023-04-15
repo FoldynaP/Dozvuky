@@ -84,15 +84,43 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			{% include "@components/core/header/header.twig" %}
+			{% include "@components/core/header/header.twig" with { props: {
+				logo: "logo.png",
+				items: [
+					{
+						title: "Interpreti",
+						link: "#"
+					},
+					{
+						title: "Novinky",
+						link: "#"
+					},
+					{
+						title: "Vstupenky",
+						link: "#"
+					},
+					{
+						title: "Galerie",
+						link: "#"
+					},
+					{
+						title: "Informace",
+						link: "#"
+					},
+					{
+						title: "Kontakty",
+						link: "#"
+					}
+				]
+			}} %}
 
 			{% block content %}{% endblock %}
 
 			{% include "@components/core/footer/footer.twig" %}
-			<div class="modal js-modal u-hide">
+			{# <div class="modal js-modal u-hide">
 				<button class="modal__close js-modal-close"></button>
 				<div class="modal__body js-modal-body"></div>
-			</div>
+			</div> #}
 		</div>
 		<script src="/js/runtime.js"></script>
 		{% for script in scripts %}

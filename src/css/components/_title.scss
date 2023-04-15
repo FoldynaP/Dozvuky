@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+    position: relative;
+
+    &__text {
+        position: relative;
+        font-size: 30px;
+        z-index: 1;
+        overflow: hidden;
+        text-align: center;
+        font-family: arial;
+    }
+    &__text:before, &__text:after {
+        position: absolute;
+        top: 51%;
+        overflow: hidden;
+        width: 48%;
+        height: 1px;
+        content: '\a0';
+        background-color: $colorWhite;
+        margin-left: 2%;
+    }
+    &__text:before {
+        margin-left: -50%;
+        text-align: right;
+    }
+}
