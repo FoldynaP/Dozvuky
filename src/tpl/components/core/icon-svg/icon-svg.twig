@@ -11,7 +11,7 @@
 	'icon-svg',
 	props.name ? 'icon-svg--' ~ props.name : null,
 	props.modifier ? props.modifier : null
-] | filter(i => i) | join(' ') %}
+]|filterSafe|join %}
 
 {# Code #}
 <span class="{{ className }}" aria-hidden="true">
