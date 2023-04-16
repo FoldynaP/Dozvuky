@@ -1,5 +1,6 @@
 @import 'abstracts/index';
 @import 'base/index';
+@import './core/generated/**/*.scss';
 @import './core/objects/**/*.scss';
 @import './components/**/*.scss';
 @import 'layout/index';

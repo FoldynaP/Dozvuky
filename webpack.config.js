@@ -1,16 +1,24 @@
 const webpack = require('webpack');
 const path = require('path');
 const config = require('./helpers/getConfig.js');
+//const { VueLoaderPlugin } = require('vue-loader');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { createSassVars, resolveTwigEntry, CopyToMVCPlugin, iconSvgCssGeneratePlugin } = require('./helpers/webpackConstruct.js');
+const {
+	createSassVars,
+	resolveTwigEntry,
+	CopyToMVCPlugin,
+	iconSvgCssGeneratePlugin,
+	iconSvgCssGeneratePluginBeforeRun,
+} = require('./helpers/webpackConstruct.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
 	entry: {
 		app: [`./${config.src.scripts}app.js`],
-		// 'vue-app': [`./${config.src.scripts}vue-app.js`],
+		//'vue-app': [`./${config.src.scripts}vue-app.js`],
 		// TODO: remove js files for css
 		styles: `./${config.src.styles}style.scss`,
 		print: `./${config.src.styles}print.scss`,
@@ -47,8 +55,7 @@ module.exports = {
 		},
 	},
 	watchOptions: {
-		ignored: new RegExp('icons-svg.scss')
-
+		ignored: new RegExp('icons-svg.scss'),
 	},
 	optimization: {
 		runtimeChunk: 'single',
@@ -104,7 +111,7 @@ module.exports = {
 						loader: 'twig-html-loader',
 						options: {
 							namespaces: config.twigNamespaces,
-							data: config,
+							data: { ...config, NODE_ENV: process.env.NODE_ENV },
 							filters: {
 								join(value) {
 									return value.join(' ');
@@ -123,6 +130,12 @@ module.exports = {
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: [path.join(__dirname, config.basePath.dest)],
 		}),
+		new SVGSpritemapPlugin('src/img/**/*.svg', {
+			output: { filename: 'img/bg/icons-svg.svg' },
+			sprite: { prefix: 'icon-' },
+		}),
+		new iconSvgCssGeneratePluginBeforeRun(),
+		new iconSvgCssGeneratePlugin(),
 
 		new webpack.DefinePlugin({
 			NODE_ENV: process.env.NODE_ENV,
@@ -135,6 +148,7 @@ module.exports = {
 			chunkFilename: 'css/[id].css',
 		}),
 
+		//new VueLoaderPlugin(),
 		new CopyPlugin({
 			patterns: [{ from: './src/img', to: 'img' }],
 		}),

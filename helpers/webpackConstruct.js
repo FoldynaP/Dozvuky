@@ -62,6 +62,8 @@ function createSassVars(config) {
 function copyToMvc() {
 	fse.emptyDirSync(config.basePath.mvc);
 	fse.copySync(path.resolve(__dirname, `../${config.basePath.dest}`), config.basePath.mvc, { overwrite: true });
+	fse.emptyDirSync(config.basePath.customElements);
+	fse.copySync(path.resolve(__dirname, `../${config.basePath.dest}`), config.basePath.customElements, { overwrite: true });
 }
 
 class CopyToMVCPlugin {
@@ -72,7 +74,7 @@ class CopyToMVCPlugin {
 	}
 }
 
-function listSvgs(dir){
+function listSvgs(dir) {
 	var items = fs.readdirSync(dir);
 	const files = [];
 	for (const item of items) {
@@ -89,12 +91,12 @@ function listSvgs(dir){
 
 class iconSvgCssGeneratePlugin {
 	apply(compiler) {
-		compiler.hooks.beforeRun.tap('iconSvgCssGeneratePlugin', (compilation) => {
-			const svgFiles = listSvgs('./src/img/bg');
-			const viewBoxes = []
+		compiler.hooks.watchRun.tap('iconSvgCssGeneratePlugin', (compilation) => {
+			const svgFiles = listSvgs('./src/img/bg/icons-svg');
+			const viewBoxes = [];
 
 			svgFiles.forEach((newFile) => {
-				const svgFile = fs.readFileSync(newFile)
+				const svgFile = fs.readFileSync(newFile);
 
 				const svgFileString = svgFile.toString();
 
@@ -102,18 +104,18 @@ class iconSvgCssGeneratePlugin {
 				const $ = cheerio.load(dom);
 
 				const symbol = $('svg');
-				const nameReplaced = newFile.replaceAll('\\', "/")
+				const nameReplaced = newFile.replaceAll('\\', '/');
 				const name = nameReplaced.split('/')[nameReplaced.split('/').length - 1].replace('.svg', '');
-				const viewbox = symbol[0].attribs.viewbox
+				const viewbox = symbol[0].attribs.viewbox;
 				if (viewbox) {
 					symbol.attr('viewBox', viewbox);
 					symbol.removeAttr('viewbox');
 				}
 
-				let viewBox = symbol[0].attribs.viewBox
+				let viewBox = symbol[0].attribs.viewBox;
 
 				if (!viewBox) {
-					viewBox = `0 0 ${symbol[0].attribs.width} ${symbol[0].attribs.height}`
+					viewBox = `0 0 ${symbol[0].attribs.width} ${symbol[0].attribs.height}`;
 				}
 
 				if (viewBox) {
@@ -124,22 +126,79 @@ class iconSvgCssGeneratePlugin {
 					width: viewBox && viewBox.length >= 2 ? viewBox[2] : 20,
 					height: viewBox && viewBox.length >= 2 ? viewBox[2] : 20,
 				});
-			})
+			});
 
-				consolidate.lodash(
-					`${config.src.styles}tpl/icons-svg.css.tpl`,
-					{
-						glyphs: viewBoxes,
-					},
-					(err, html) => {
-						if (html) {
-							if (!fs.existsSync(`${config.src.styles}core/generated`)) {
-								fs.mkdirSync(`${config.src.styles}core/generated`);
-							}
-							fs.writeFileSync(`${config.src.styles}core/generated/icons-svg.scss`, html);
+			consolidate.lodash(
+				`${config.src.styles}tpl/icons-svg.css.tpl`,
+				{
+					glyphs: viewBoxes,
+				},
+				(err, html) => {
+					if (html) {
+						if (!fs.existsSync(`${config.src.styles}core/generated`)) {
+							fs.mkdirSync(`${config.src.styles}core/generated`);
 						}
-					},
-				);
+						fs.writeFileSync(`${config.src.styles}core/generated/icons-svg.scss`, html);
+					}
+				},
+			);
+		});
+	}
+}
+
+class iconSvgCssGeneratePluginBeforeRun {
+	apply(compiler) {
+		compiler.hooks.beforeRun.tap('iconSvgCssGeneratePlugin', (compilation) => {
+			const svgFiles = listSvgs('./src/img/bg');
+			const viewBoxes = [];
+
+			svgFiles.forEach((newFile) => {
+				const svgFile = fs.readFileSync(newFile);
+
+				const svgFileString = svgFile.toString();
+
+				const dom = htmlparser2.parseDocument(svgFileString, {});
+				const $ = cheerio.load(dom);
+
+				const symbol = $('svg');
+				const nameReplaced = newFile.replaceAll('\\', '/');
+				const name = nameReplaced.split('/')[nameReplaced.split('/').length - 1].replace('.svg', '');
+				const viewbox = symbol[0].attribs.viewbox;
+				if (viewbox) {
+					symbol.attr('viewBox', viewbox);
+					symbol.removeAttr('viewbox');
+				}
+
+				let viewBox = symbol[0].attribs.viewBox;
+
+				if (!viewBox) {
+					viewBox = `0 0 ${symbol[0].attribs.width} ${symbol[0].attribs.height}`;
+				}
+
+				if (viewBox) {
+					viewBox = viewBox.split(' ');
+				}
+				viewBoxes.push({
+					name,
+					width: viewBox && viewBox.length >= 2 ? viewBox[2] : 20,
+					height: viewBox && viewBox.length >= 2 ? viewBox[2] : 20,
+				});
+			});
+
+			consolidate.lodash(
+				`${config.src.styles}tpl/icons-svg.css.tpl`,
+				{
+					glyphs: viewBoxes,
+				},
+				(err, html) => {
+					if (html) {
+						if (!fs.existsSync(`${config.src.styles}core/generated`)) {
+							fs.mkdirSync(`${config.src.styles}core/generated`);
+						}
+						fs.writeFileSync(`${config.src.styles}core/generated/icons-svg.scss`, html);
+					}
+				},
+			);
 		});
 	}
 }
@@ -149,4 +208,5 @@ module.exports = {
 	createSassVars,
 	CopyToMVCPlugin,
 	iconSvgCssGeneratePlugin,
+	iconSvgCssGeneratePluginBeforeRun,
 };

@@ -1,10 +1,11 @@
 const path = require('path');
 const basePath = {
 	src: 'src/',
-	dest: './dist/',
+	dest: 'dist/',
 	assets: '../',
-	mvc: '../Mainz05/wwwroot/', // Change the basePath of new MVC project
-	mvcStatic: '../EON/static/', // Change the basePath of new MVC project
+	mvc: '../Edu/wwwroot/', // Change the basePath of new MVC project
+	mvcStatic: './EON/static/', // Change the basePath of new MVC project
+	customElements: '../CustomElements/wwwroot/edu',
 };
 
 const src = {
@@ -72,7 +73,7 @@ const mediaQueries = {
 		md: '750px',
 		lg: '1000px',
 		xl: '1200px',
-		xxl: '1600px'
+		xxl: '1400px',
 	},
 	rules: {
 		webkit: '(-webkit-min-device-pixel-ratio: 0)',
