@@ -33,20 +33,33 @@
         transition: .3s;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.74) 100%)
     }
-    &__description {
+    &__more {
         height: 0;
         opacity: 0;
         transition: height $t, opacity $t;
+    }
+    &__controls {
+        display: none;
+    }
+    &__show-more {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        & .icon-svg {
+            transform: rotate(180deg);
+        }
     }
     @media ($mdUp) {
         &__item {
             min-width: 33.33%;
         }
-        .hoverevents &__item:hover &__content {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 00%, rgba(0, 0, 0, 0.94) 100%);
+        &__controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
         }
-        .hoverevents &__item:hover &__description {
-            height: 33.33%;
+        .hoverevents &__item:hover &__more {
+            height: 30%;
             opacity: 1;
         }
     }

@@ -11,7 +11,10 @@
                     </div>
                     <div class="carousel-band__content">
                         <h4 class="carousel-band__title">{{ item.title }}</h4>
-                        <p class="carousel-band__description">{{ item.description }} <span><u>Info o kapele</u></span></p>
+                        <div class="carousel-band__more">
+                            <p class="carousel-band__description">{{ item.description }}</p>
+                            <span class="carousel-band__show-more">Zobrazit více {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %}</span>
+                        </div>
                     </div>
             </a>
             {% endfor %}
@@ -28,5 +31,9 @@
                 {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
             </button>
         </div>
+    </div>
+    <div class="embla__dots"></div>
+    <div id="embla-dot-template">
+      <button class="embla__dot" type="button"></button>
     </div>
 </div>
