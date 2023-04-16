@@ -3,6 +3,7 @@ import * as accordion from './components/accordion';
 import * as menu from './components/menu';
 import * as hero from './components/hero';
 import * as embla from './components/embla';
+import * as parallax from './components/parallax';
 
 // content load components
 const componentsload = [];
@@ -12,7 +13,8 @@ const components = [
 	accordion,
 	menu,
 	hero,
-	embla
+	embla,
+	parallax
 ].concat(componentsload);
 window.App = {
 	run() {
