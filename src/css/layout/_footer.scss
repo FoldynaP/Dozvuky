@@ -1,6 +1,10 @@
 .footer {
-    background: url($imgPath + '/bg/patterns/black-pattern.jpg');
+    position: relative;
+    z-index: 20;
+    //background: url($imgPath + '/illust/patterns/black-pattern.jpg');
+    background-color: $colorBlack;
     background-size: cover;
+    padding: 40px 0;
     &__copyright {
         color: $colorWhite;
         margin-bottom: 0;
@@ -10,5 +14,41 @@
         li {
             margin-bottom: 0;
         }
+    }
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+    &__social-link {
+        @extend %reset-anchor;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        padding: 10px;
+        & .icon-svg {
+            color: $colorWhite;
+            width: 30px;
+            transition: color $t;
+        }
+    }
+    &__created {
+        color: $colorBlack40;
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .hoverevents &__social-link:hover {
+        border-color: $colorWhite;
+        background-color: $colorWhite;
+        transition: .3s;
+        & .icon-svg {
+            color: $colorBlack;
+            transition: .3s;
+        }
+    }
+    @media ($mdUp) {
+        padding: 80px 0;
     }
 }

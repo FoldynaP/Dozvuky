@@ -1,7 +1,10 @@
 .header {
-    position: relative;
+    position: fixed;
     margin-bottom: -70px;
-    z-index: 10;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
     background-image: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
     backdrop-filter: blur(10px);
     .menu-open & {

@@ -23,6 +23,7 @@ h6,
 	font-weight: 700;
 	line-height: 1.2;
 	text-transform: uppercase;
+	letter-spacing: 0.02em;
 }
 h1,
 .h1 {
@@ -60,6 +61,7 @@ h6,
 // Paragraph
 p {
 	margin: 0 0 $typoSpaceVertical;
+	letter-spacing: 0.03em;
 }
 hr {
 	height: 1px;

@@ -1,12 +1,21 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer__copyright">
-            <h3>Stránky vytvořil: Petr Foldyna</h3>
-            <ul>
-                <li>Kontakt: +420 606 767 826</li>
-                <li>Email: petr.foldyna12@gmail.com</li>
-                <li>IČO: 467 798 632</li>
-            </ul>
+        <div class="footer__copyright u-text-center">
+            <h3>Pro vás od nás</h3>
+            <h4>Sledujte nás na sociálních sítích:</h4>
+            <div class="footer__socials">
+                <a target="_blank" href="https://www.facebook.com/provasodnas" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
+                <a target="_blank" href="https://www.instagram.com/dozvuky_leta/" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                <a target="_blank" href="#" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "twitter" }} %}</a>
+            </div>
+            <div class="footer__created">
+                <p class="footer__author">Web vytvořil Petr Foldyna</p>
+                <ul>
+                    <li>Kontakt: +420 606 767 826</li>
+                    <li>Email: petr.foldyna12@gmail.com</li>
+                    <li>IČO: 467 798 632</li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
