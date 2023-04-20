@@ -2,6 +2,109 @@
 {% set pageTitle = 'Dozvuky léta - Galerie' %}
 {% set description = 'V galerii stránky dozvuků léta naleznete fotografie z předešlých ročníků festivalu.' %}
 
+{% set gallery =[
+    {
+        img: "gallery/galerie1.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie2.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie3.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie4.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie5.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie1.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie2.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie3.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie4.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie5.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie1.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie2.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie3.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie4.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie5.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie1.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie2.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie3.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie4.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+    {
+        img: "gallery/galerie5.webp",
+        link: "#",
+        alt: "Popis1",
+    },
+
+]%}
 
 {% block content %}
 
@@ -12,6 +115,13 @@
                 title: "Galerie",
                 tag: "h2",
             }} %}
+            <div class="grid grid--center">
+                {% for item in gallery %}
+                <div class="grid__col col-6-12@sm col-4-12@md col-3-12@lg">
+                    {% include "@components/box/gallery-item/gallery-item.twig" %}
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 </main>

@@ -5,10 +5,13 @@
     left: 0;
     right: 0;
     z-index: 20;
-    background-image: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     .menu-open & {
-        background-color: $colorSecondary
+        //background-color: $colorSecondary
     }
     &__list {
         @extend %reset-ul;
@@ -39,7 +42,9 @@
     }
     &__logo {
         & img {
-            max-height: 40px;
+            max-width: 60px;
+            border-radius: 2px
+            //max-height: 40px;
         }
     }
     &__item {

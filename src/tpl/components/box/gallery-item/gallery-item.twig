@@ -1,0 +1,7 @@
+<a href="{{ item.link }}" class="gallery-item">
+    {% include "@components/core/image/image.twig" with { item: {
+        img: item.img,
+        alt: item.alt,
+        lazyload: true
+    }} %} 
+</a>

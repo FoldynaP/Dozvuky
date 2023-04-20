@@ -1,21 +1,23 @@
 .section {
+	position: relative;
 	&--top {
 		padding-top: 60px;
 	}
 	&--top-lg {
-		padding-top: 12px;
+		padding-top: 120px;
 	}
 	&--bottom {
 		margin-bottom: 60px;
 	}
 	&--bg {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),
     url($imgPath + '/illust/bg/publikum.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top;
 	margin-top: 120px;
 	padding-bottom: 60px;
+	z-index: 1;
 	}
 	@media ($xlUp) {
 		&--top {

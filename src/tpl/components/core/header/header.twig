@@ -7,11 +7,13 @@
                 }} %}
             </a>
         </div>
-        <ul class="header__list js-menu-content">
-            {% for item in props.items %}
-            <li class="header__item"><a href="{{ item.link }}" class="header__link">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
+        <div class="header__list-wrap">
+            <ul class="header__list js-menu-content">
+                {% for item in props.items %}
+                <li class="header__item js-menu-link"><a href="{{ item.link }}" class="header__link">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
         <button type="button" class="header__toggle js-menu-btn" aria-label="Menu ">
 			<span class="header__toggle-ico">
 				<span></span><span></span><span></span>

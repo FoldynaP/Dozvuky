@@ -1,9 +1,9 @@
 export const init = () => {
     const hero = document.querySelector(".js-hero");
+    if (!hero) return;
     const interval = hero.dataset.interval;
     const ACTIVE_CLASS = "is-active"
     let HeroInterval;
-    if (!hero) return;
 
     function nextSlide() {
         clearTimeout(HeroInterval);

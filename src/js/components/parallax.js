@@ -1,5 +1,7 @@
 
 export const init = () => {
+    const parallax = document.querySelector(".js-parallax-container");
+    if (!parallax) return;
     let path = document.querySelector("path");
     let pathLenght = path.getTotalLength();
 
@@ -7,13 +9,13 @@ export const init = () => {
 
     path.style.strokeDashoffset = pathLenght;
 
-    window.addEventListener("scroll", () => {
-      var scrollPercentage =
+    document.addEventListener("scroll", () => {
+      const scrollPercentage =
         (document.documentElement.scrollTop + document.body.scrollTop) /
         (document.documentElement.scrollHeight -
           document.documentElement.clientHeight);
 
-      var drawLenght = pathLenght * scrollPercentage;
+      const drawLenght = pathLenght * scrollPercentage;
 
       path.style.strokeDashoffset = pathLenght - drawLenght;
     });

@@ -1,0 +1,12 @@
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    & .icon-svg {
+        transform: rotate(180deg);
+        transition: $t;
+    }
+    .hoverevents &:hover .icon-svg {
+        transform: rotate(180deg) translateX(-10px);
+    }
+}

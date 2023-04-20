@@ -1,12 +1,25 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer__copyright u-text-center">
-            <h3>Pro vás od nás</h3>
-            <h4>Sledujte nás na sociálních sítích:</h4>
-            <div class="footer__socials">
-                <a target="_blank" href="https://www.facebook.com/provasodnas" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
-                <a target="_blank" href="https://www.instagram.com/dozvuky_leta/" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
-                <a target="_blank" href="#" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "twitter" }} %}</a>
+        <div class="footer__wrap u-text-center">
+            <div class="footer__top">
+                <div class="footer__owner">
+                    <div class="footer__logo">
+                        <a href="/">
+                            {% include "@components/core/image/image.twig" with { item: {
+                                img: props.logo
+                            }} %}
+                        </a>
+                    </div>
+                    <h3>Pro vás od nás</h3>
+                </div>
+                <div class="footer__social-wrap">
+                    <h4>Sledujte nás na sociálních sítích:</h4>
+                    <div class="footer__socials">
+                        <a target="_blank" href="https://www.facebook.com/provasodnas" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
+                        <a target="_blank" href="https://www.instagram.com/dozvuky_leta/" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                        <a target="_blank" href="#" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "twitter" }} %}</a>
+                    </div>
+                </div>
             </div>
             <div class="footer__created">
                 <p class="footer__author">Web vytvořil Petr Foldyna</p>

@@ -1,11 +1,10 @@
 .footer {
     position: relative;
-    z-index: 20;
     //background: url($imgPath + '/illust/patterns/black-pattern.jpg');
     background-color: $colorBlack;
     background-size: cover;
     padding: 40px 0;
-    &__copyright {
+    &__wrap {
         color: $colorWhite;
         margin-bottom: 0;
         ul {
@@ -13,6 +12,11 @@
         }
         li {
             margin-bottom: 0;
+        }
+    }
+    &__logo {
+        & img {
+            max-width: 160px;
         }
     }
     &__socials {
@@ -32,6 +36,20 @@
             transition: all 0.3s;
         }
     }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    &__owner {
+        display: flex;
+        gap: 20px;
+    }
+    &__social-wrap {
+        display: flex;
+        flex-direction: column;
+    }
     &__created {
         color: $colorBlack40;
         ul {
@@ -42,7 +60,6 @@
     .hoverevents &__social-link:hover {
         border-color: $colorWhite;
         background-color: $colorWhite;
-        transition: .3s;
         & .icon-svg {
             color: $colorSecondary;
             transition: .3s;

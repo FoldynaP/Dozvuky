@@ -1,0 +1,12 @@
+.gallery-item {
+    overflow: hidden;
+    & .image img {
+        border-radius: 4px;
+        transition: transform $t;
+    }
+    @media($lgUp) {
+        .hoverevents &:hover .image img {
+            transform: scale(1.075);
+        }
+    }
+}

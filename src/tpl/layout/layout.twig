@@ -89,7 +89,7 @@
 				items: [
 					{
 						title: "Vstupenky",
-						link: "#tickets"
+						link: "/#tickets"
 					},
 					{
 						title: "Kapely",
@@ -116,7 +116,9 @@
 
 			{% block content %}{% endblock %}
 
-			{% include "@components/core/footer/footer.twig" %}
+			{% include "@components/core/footer/footer.twig" with { props: {
+				logo: "Logo-1.png",
+			}}%}
 			{# <div class="modal js-modal u-hide">
 				<button class="modal__close js-modal-close"></button>
 				<div class="modal__body js-modal-body"></div>
