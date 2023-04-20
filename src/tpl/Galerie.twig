@@ -1,0 +1,19 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Galerie' %}
+{% set description = 'V galerii stránky dozvuků léta naleznete fotografie z předešlých ročníků festivalu.' %}
+
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section section--top-lg section--bottom">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Galerie",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

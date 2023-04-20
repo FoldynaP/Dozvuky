@@ -29,7 +29,7 @@
         & .icon-svg {
             color: $colorWhite;
             width: 30px;
-            transition: color $t;
+            transition: all 0.3s;
         }
     }
     &__created {
@@ -44,7 +44,7 @@
         background-color: $colorWhite;
         transition: .3s;
         & .icon-svg {
-            color: $colorBlack;
+            color: $colorSecondary;
             transition: .3s;
         }
     }

@@ -19,7 +19,8 @@ h5,
 h6,
 .h6 {
 	margin: 1.5em 0 0.5em;
-	font-family: $colorText;
+	font-family: $fontPrimary;
+	color: $colorText;
 	font-weight: 700;
 	line-height: 1.2;
 	text-transform: uppercase;

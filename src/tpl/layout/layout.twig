@@ -7,24 +7,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 		<meta name="twitter:card" content="summary">
-		<meta name="twitter:title" content="{{ pageTitle }} | Project">
+		<meta name="twitter:title" content="{{ pageTitle }}">
 		<meta name="twitter:description" content="">
 		<meta name="twitter:image" content="http://www.example.com/image.jpg">
 
-		<meta property="og:title" content="{{ pageTitle }} | Project">
+		<meta property="og:title" content="{{ pageTitle }}">
 		<meta property="og:description" content="">
 		<meta property="og:image" content="http://www.example.com/image.jpg">
 		<meta property="og:site_name" content="Project">
 		<meta property="og:url" content="http://www.example.com/">
 
-		<title>{{ pageTitle }} | Project</title>
+		<title>{{ pageTitle }}</title>
 
 		<link rel="stylesheet" href="{{ assets.styles }}styles.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
 		<link rel="prerender" href="/">
 
 		{% set fonts = [
-			assets.fonts ~ 'M05TextWeb-Regular.woff2'
+			assets.fonts ~ 'gillsansmt.woff2'
 		] %}
 		{# assets.fonts ~ '', #}
 
@@ -85,10 +85,14 @@
 	<body>
 		<div class="wrapper">
 			{% include "@components/core/header/header.twig" with { props: {
-				logo: "logo.png",
+				logo: "Logo-1.png",
 				items: [
 					{
-						title: "Interpreti",
+						title: "Vstupenky",
+						link: "#tickets"
+					},
+					{
+						title: "Kapely",
 						link: "#"
 					},
 					{
@@ -96,12 +100,8 @@
 						link: "#"
 					},
 					{
-						title: "Vstupenky",
-						link: "#"
-					},
-					{
 						title: "Galerie",
-						link: "#"
+						link: "/galerie.html"
 					},
 					{
 						title: "Informace",

@@ -1,5 +1,5 @@
 {% extends '@layout/layout.twig' %}
-{% set pageTitle = 'Dozvuky léta' %}
+{% set pageTitle = 'Festival Dozvuky léta' %}
 {% set description = 'Domovská stránka festivalu dozvuky léta, konající se v České Třebové' %}
 
 
@@ -85,12 +85,24 @@
                 }} %}
             </div>
         </section>
+        <section class="section section--top section--bg" id="tickets">
+            <div class="container">
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Neváhejte koupit lístek!",
+                    tag: "h2",
+                }} %}
+                <h4 class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda</h4>
+                <div class="button-wrapper u-text-center" data-tippy-content="Click to copy button 49">
+                    <a target="_blank" href="https://www.ticketportal.cz/" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
+                </div>
+            </div>
+        </section>
         <section class="section section--top section--bottom">
             <div class="container">
                 <p class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda, ducimus optio rerum distinctio, ratione neque, voluptatem amet necessitatibus! Aspernatur illo, quae assumenda voluptatem numquam temporibus, ex sit quod voluptate dolore iste repudiandae est! Minima, deserunt quod! Architecto, explicabo! Molestias, consequuntur quae iure saepe molestiae odit? Itaque, enim sint! Corrupti, voluptatum veritatis. Quis ipsam reprehenderit nam repudiandae quae consequuntur, aperiam, explicabo deserunt vel, tempora impedit porro aliquid! Ut, amet mollitia libero accusantium voluptas fuga quia aliquid et numquam laborum voluptate ratione provident, ab iure voluptatibus dolor sit iste doloribus.</p>
             </div>
         </section>
-        <section class="section section--top section--bottom" id="tickets">
+        <section class="section section--top section--bottom">
             <div class="container">
                 <p class="u-text-center">Lístky</p>
             </div>

@@ -1,9 +1,11 @@
 <header class="header js-menu">
     <nav class="header__wrap">
         <div class="header__logo">
-        {% include "@components/core/image/image.twig" with { item: {
-            img: props.logo
-        }} %}
+            <a href="/">
+                {% include "@components/core/image/image.twig" with { item: {
+                    img: props.logo
+                }} %}
+            </a>
         </div>
         <ul class="header__list js-menu-content">
             {% for item in props.items %}
