@@ -4,6 +4,7 @@ import * as menu from './components/menu';
 import * as hero from './components/hero';
 import * as embla from './components/embla';
 import * as parallax from './components/parallax';
+import fslightbox from 'fslightbox';
 
 // content load components
 const componentsload = [];

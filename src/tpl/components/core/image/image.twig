@@ -26,7 +26,7 @@
 			<source srcset="{{ assets.images }}illust/{{item.imgWebp}}{% if item.imgWebp2x %}, {{ assets.images}}illust/{{item.imgWebp2x}} 2x{% endif %}" type="image/webp">
 			{% endif %}
 			<source srcset="{{ assets.images}}illust/{{item.img}}{% if item.img2x %}, {{ assets.images}}illust/{{item.img2x}} 2x{% endif %}" >
-			<img src="{{ assets.images }}/illust/{{ item.img}}" alt="" {% if item.lazyload %}loading="lazy"{% endif %}>
+			<img src="{{ assets.images }}/illust/{{ item.img}}" alt="{{ item.alt }}" {% if item.lazyload %}loading="lazy"{% endif %}>
 		</picture>
 	{% endif %}
 </figure>
