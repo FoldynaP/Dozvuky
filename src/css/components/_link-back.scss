@@ -1,0 +1,12 @@
+.link-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    & .icon-svg {
+        transition: transform $t;
+    }
+    .hoverevents &:hover .icon-svg {
+        transform: translateX(-10px);
+    }
+}

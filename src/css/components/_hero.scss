@@ -3,15 +3,29 @@
     margin-top: -67px;
     position: relative;
     min-height: 500px;
+    height: 100vh;
     &__slides {
         display: flex;
     }
     &__img {
         min-height: 500px;
+        height: 100vh;
         width: 100%;
         margin-left: -100%;
         opacity: 0;
         transition: opacity 1s;
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: linear-gradient(rgba(0, 0, 0, 0));
+            background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(0,0,0,0.5) 100%);
+            top: 70px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+        }
         &.is-active {
             // margin-left: -100%;
             opacity: 1;
@@ -20,32 +34,59 @@
     }
     &__content {
         position: absolute;
-        left: 50%;
+        left: 0;
         top: 50%;
-        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        transform: translate(0, -50%);
+    }
+    &__title {
+        font-size: 40px;
+    }
+    &__annot {
+        margin: 0;
     }
     &__timeline {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 3px;
+        height: 6px;
         background-color: $colorSecondary;
         transform: scaleX(0);
         transform-origin: 0 50%;
+        border-radius: 0 5px 5px 0;
 
         .is-sliding & {
             animation: scale linear forwards;
             animation-duration: var(--slide-duration);
         }
     }
+    & .button-wrapper {
+        padding-top: 20px;
+    }
     @media ($mdUp) {
-        max-height: 800px;
+        //max-height: 800px;
         &__img {
-            max-height: 800px;
+            //max-height: 800px;
             & .image img {
                 aspect-ratio: 16/9;
             }
+        }
+    }
+    @media ($lgUp) {
+        &__title {
+            font-size: 72px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        &__annot {
+            font-size: 28px;
+            line-height: 36px;
+            text-align: center;
+        }
+        & .button-wrapper {
+            padding-top: 40px;
         }
     }
 }

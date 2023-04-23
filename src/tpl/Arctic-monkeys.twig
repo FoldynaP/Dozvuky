@@ -1,0 +1,19 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Arctic Monkeys' %}
+{% set description = 'Arctic monkeys je rocková kapela, která bude účinkovat na festivalu dozvuky léta 1.9.2023.' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "",
+                alt: "",
+                title: "Arctic monkeys",
+            }} %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

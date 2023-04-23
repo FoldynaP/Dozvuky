@@ -54,7 +54,7 @@
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 26px;
         color: $colorBlack;
     }
     &__toggle {
@@ -98,6 +98,7 @@
 		}
 	}
     @media ($lgUp) {
+        max-width: 1920px;
         &__list {
             justify-content: flex-end;
             flex-direction: row;
@@ -108,8 +109,12 @@
             height: initial;
             width: initial;
         }
+        &__wrap {
+            padding: 15px 30px;
+        }
         &__link {
             color: $colorText;
+            font-size: 18px;
         }
         &__toggle {
             display: none;

@@ -1,0 +1,58 @@
+.crossroad {
+    @extend %reset-anchor;
+    display: flex;
+    &__img {
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        & img {
+            transition: transform $t;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: linear-gradient(rgba(0, 0, 0, 0));
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%);
+            top: 70px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+        }
+    }
+    &__content {
+        margin-left: -100%;
+        z-index: 1;
+        width: 100%;
+        color: $colorSecondary;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 15px;
+    }
+    &__title {
+        transition: color $t;
+        & .icon-svg {
+            transform: rotate(180deg);
+            transition: transform $t;
+        }
+    }
+    @media ($mdUp) {
+        &__img {
+            & img {
+                aspect-ratio: 16/11;
+            }
+        }
+        .hoverevents &:hover &__title {
+            color: $colorSecondary;
+            & .icon-svg {
+                transform: rotate(180deg) translateX(-10px);
+            }
+        }
+        .hoverevents &:hover &__img img {
+            transform: scale(1.05);
+        }
+    }
+}
