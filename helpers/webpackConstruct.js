@@ -9,27 +9,75 @@ const consolidate = require('consolidate');
 
 function resolveTwigEntry() {
 	const twigs = [];
-	fs.readdirSync(path.resolve(__dirname, '../src/tpl/')).forEach((file) => {
-		if (file.includes('.twig')) {
-			twigs.push(`./${config.src.templates}${file}`);
-		}
+	const templatesDir = path.resolve(__dirname, '../src/tpl');
+	const viewsDir = path.resolve(__dirname, '../src/tpl/Views');
+  
+	// Add twig files from templates directory
+	fs.readdirSync(templatesDir).forEach((file) => {
+	  if (file.includes('.twig')) {
+		const nameWithoutExt = file.split('.')[0];
+		const outputPath = path.resolve(__dirname, `../dist`);
+  
+		// Create output directory if it doesn't exist
+		fse.ensureDirSync(outputPath);
+  
+		// Add twig file to webpack entry points
+		twigs.push({
+		  name: nameWithoutExt,
+		  entry: `./src/tpl/${nameWithoutExt}.twig`,
+		  output: {
+			path: outputPath,
+			filename: `${nameWithoutExt}.html`
+		  }
+		});
+	  }
 	});
-
+  
+	// Add twig files from views directory
+	const helperFile = [];
+	fs.readdirSync(viewsDir).forEach((file) => {
+		const nameWithoutExt = file.split('.')[0];
+		const outputPath = path.resolve(__dirname, `../dist/${nameWithoutExt}`);
+  
+		// 	// Create output directory if it doesn't exist
+		fse.ensureDirSync(outputPath);
+		helperFile.push(file);
+	}
+	);
+	for (file of helperFile) {
+		if (fs.existsSync(path.resolve(__dirname, `../dist/${file}`))) {
+			fs.readdirSync(path.resolve(__dirname, `../src/tpl/Views/${file}`)).forEach((subfile) => {
+				const nameSubfileWithoutExt = subfile.split('.')[0];
+					// Add twig file to webpack entry points
+					twigs.push({
+					  name: nameSubfileWithoutExt,
+					  entry: `./src/tpl/Views/${file}/${nameSubfileWithoutExt}.twig`,
+					  output: {
+						path: path.resolve(__dirname, `../dist/${file}`),
+						filename: `${nameSubfileWithoutExt}.html`
+					  }
+					});
+					console.log(twigs)
+			});
+		}
+	}
+  
 	const twigsArr = [];
 	for (tw of twigs) {
-		const name = tw.split('/')[tw.split('/').length - 1];
+		const name = tw.name.split('/')[tw.name.split('/').length - 1];
 		const nameWithoutExt = name.split('.')[0];
-		twigsArr.push(
-			new HtmlWebpackPlugin({
-				inject: true,
-				chunks: [nameWithoutExt],
-				filename: `/${nameWithoutExt}.html`,
-				template: `./src/tpl/${nameWithoutExt}.twig`,
-			}),
-		);
+	  twigsArr.push(
+		new HtmlWebpackPlugin({
+		  inject: true,
+		  chunks: [tw.name],
+		  //filename: `/${nameWithoutExt}.html`,
+		  filename: `${tw.output.path}/${tw.output.filename}`,
+		  template: tw.entry,
+		})
+	  );
 	}
 	return twigsArr;
-}
+  }
 
 function myJsonToSassObject(varName, obj) {
 	if (typeof obj === 'object') {
