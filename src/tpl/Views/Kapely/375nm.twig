@@ -1,0 +1,46 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Arctic Monkeys' %}
+{% set description = 'Arctic monkeys je rocková kapela, která bude účinkovat na festivalu dozvuky léta 1.9.2023.' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section section--top-lg">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "main-image/galerie2.webp",
+                alt: "kapela 375 m.n.m",
+                title: "375 m.n.m",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Česko třebovská kapela 375 m.n.m",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/375mnm" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://www.instagram.com/375_m.n.m/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                </div>
+                <div class="blog__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore totam aspernatur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quis similique non iste et minima nisi amet est modi voluptates asperiores corrupti quia doloremque velit deserunt fuga! Harum, ut expedita. Quia reprehenderit aliquam ea nulla iste nostrum harum aut expedita! Et unde nihil ea, voluptates dolorem nisi recusandae molestias, eligendi quidem dolores nostrum, quis blanditiis! Officia cumque excepturi necessitatibus impedit debitis, quam a rem! Consectetur nam sequi sapiente placeat, aliquid ex dolore incidunt, tempore aspernatur quas ullam aliquam soluta assumenda id reprehenderit necessitatibus magnam modi corporis deserunt! Nihil, architecto, omnis explicabo id alias facere molestiae enim, perspiciatis eligendi hic ab! ipsum voluptas quaerat nam sunt quibusdam aliquid at eligendi iure, nemo quidem laboriosam excepturi veritatis cum officia possimus illo numquam ea debitis deserunt atque. Veritatis dolor commodi fuga!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et incidunt tempore accusamus vel minima doloremque voluptatibus libero praesentium asperiores ut.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia, dolores, eligendi quibusdam quisquam aspernatur nisi expedita omnis non quod iusto beatae? Ab commodi incidunt totam maxime ad ea accusamus?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore totam aspernatur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quis similique non iste et minima nisi amet est modi voluptates asperiores corrupti quia doloremque velit deserunt fuga! Harum, ut expedita. Quia reprehenderit aliquam ea nulla iste nostrum harum aut expedita! Et unde nihil ea, voluptates dolorem nisi recusandae molestias, eligendi quidem dolores nostrum, quis blanditiis! Officia cumque excepturi necessitatibus impedit debitis, quam a rem! Consectetur nam sequi sapiente placeat, aliquid ex dolore incidunt, tempore aspernatur quas ullam aliquam soluta assumenda id reprehenderit necessitatibus magnam modi corporis deserunt! Nihil, architecto, omnis explicabo id alias facere molestiae enim, perspiciatis eligendi hic ab! ipsum voluptas quaerat nam sunt quibusdam aliquid at eligendi iure, nemo quidem laboriosam excepturi veritatis cum officia possimus illo numquam ea debitis deserunt atque. Veritatis dolor commodi fuga!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et incidunt tempore accusamus vel minima doloremque voluptatibus libero praesentium asperiores ut.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia, dolores, eligendi quibusdam quisquam aspernatur nisi expedita omnis non quod iusto beatae? Ab commodi incidunt totam maxime ad ea accusamus?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

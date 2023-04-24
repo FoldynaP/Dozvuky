@@ -22,7 +22,7 @@
         left: 90%;
         transform: translate(-50%, -50%);
       
-        animation-name: animate;
+        animation-name: neon;
         animation-duration: 0.8s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
@@ -41,19 +41,6 @@
       font-family: $fontSystem;
       font-size: 4em;
     }
-      
-      @keyframes animate {
-        0% {
-          filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 3px #fff)
-            drop-shadow(0px 0px 10px #6be6aad9) drop-shadow(0px 0px 30px #64c294d9
-            ) drop-shadow(0px 0px 50px #00a657d9);
-        }
-        100% {
-          filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 6px #fff)
-            drop-shadow(0px 0px 15px #6be6aad9) drop-shadow(0px 0px 40px #64c294d9)
-            drop-shadow(0px 0px 60px #64c294d9);
-        }
-      }
   }
   
   

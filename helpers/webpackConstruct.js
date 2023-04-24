@@ -48,29 +48,25 @@ function resolveTwigEntry() {
 		if (fs.existsSync(path.resolve(__dirname, `../dist/${file}`))) {
 			fs.readdirSync(path.resolve(__dirname, `../src/tpl/Views/${file}`)).forEach((subfile) => {
 				const nameSubfileWithoutExt = subfile.split('.')[0];
-					// Add twig file to webpack entry points
-					twigs.push({
-					  name: nameSubfileWithoutExt,
-					  entry: `./src/tpl/Views/${file}/${nameSubfileWithoutExt}.twig`,
-					  output: {
-						path: path.resolve(__dirname, `../dist/${file}`),
-						filename: `${nameSubfileWithoutExt}.html`
-					  }
-					});
-					console.log(twigs)
+				// Add twig file to webpack entry points
+				twigs.push({
+					name: nameSubfileWithoutExt,
+					entry: `./src/tpl/Views/${file}/${nameSubfileWithoutExt}.twig`,
+					output: {
+					path: path.resolve(__dirname, `../dist/${file}`),
+					filename: `${nameSubfileWithoutExt}.html`
+					}
+				});
 			});
 		}
 	}
   
 	const twigsArr = [];
 	for (tw of twigs) {
-		const name = tw.name.split('/')[tw.name.split('/').length - 1];
-		const nameWithoutExt = name.split('.')[0];
 	  twigsArr.push(
 		new HtmlWebpackPlugin({
 		  inject: true,
 		  chunks: [tw.name],
-		  //filename: `/${nameWithoutExt}.html`,
 		  filename: `${tw.output.path}/${tw.output.filename}`,
 		  template: tw.entry,
 		})
