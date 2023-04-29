@@ -14,7 +14,10 @@ body {
 	margin: 0 auto;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	background-color: #101010;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),
+    url($imgPath + '/illust/bg/bg.jpg');
+	background-repeat: repeat-y;
+	background-size: 100%;
 	&.menu-open {
 		overflow: hidden;
 	}
