@@ -1,12 +1,23 @@
 .blog {
     &__social {
         display: flex;
-        gap: 10px;
+        gap: 30px;
+        margin-top: 40px;
+        align-items: center;
     }
     &__social-item {
+        background-color: $colorWhite;
+        padding: 20px;
+        border-radius: 10px;
         & .icon-svg {
             width: 40px;
+            color: $colorSecondary;
         }
+    }
+    &__text {
+        padding: 30px;
+        background-color: #222222;
+        border-radius: 10px;
     }
     @media ($mdUp) {
         display: flex;
@@ -18,6 +29,8 @@
             top: 100px;
             flex-direction: column;
             align-items: center;
+            margin-top: 0;
+            order: 0;
         }
         &__text {
             flex: 0 1 70%;
