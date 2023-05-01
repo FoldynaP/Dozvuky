@@ -5,7 +5,7 @@
 {% block content %}
 
 <main role="main" id="main" class="main">
-    <section class="section section--top">
+    <section class="section">
         <div class="container">
             <a href="/Kapely.html" class="link-back">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %} Zpět</a>
         </div>
@@ -37,17 +37,22 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore totam aspernatur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quis similique non iste et minima nisi amet est modi voluptates asperiores corrupti quia doloremque velit deserunt fuga! Harum, ut expedita. Quia reprehenderit aliquam ea nulla iste nostrum harum aut expedita! Et unde nihil ea, voluptates dolorem nisi recusandae molestias, eligendi quidem dolores nostrum, quis blanditiis! Officia cumque excepturi necessitatibus impedit debitis, quam a rem! Consectetur nam sequi sapiente placeat, aliquid ex dolore incidunt, tempore aspernatur quas ullam aliquam soluta assumenda id reprehenderit necessitatibus magnam modi corporis deserunt! Nihil, architecto, omnis explicabo id alias facere molestiae enim, perspiciatis eligendi hic ab! ipsum voluptas quaerat nam sunt quibusdam aliquid at eligendi iure, nemo quidem laboriosam excepturi veritatis cum officia possimus illo numquam ea debitis deserunt atque. Veritatis dolor commodi fuga!</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et incidunt tempore accusamus vel minima doloremque voluptatibus libero praesentium asperiores ut.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia, dolores, eligendi quibusdam quisquam aspernatur nisi expedita omnis non quod iusto beatae? Ab commodi incidunt totam maxime ad ea accusamus?</p>
-                    {# <div class="blog__audio-section">
-                        <audio controls>
-                            <source src="{{ assets.images }}illust/mp3/americanIdiot.mp3" type="audio/mpeg">
-                        </audio>
+                    <div class="blog__audio-section">
+                        <h4>Ukázka z tvorby:</h4>
+                        {% include "@components/box/audio/audio.twig" with { props: { 
+                            src: "https://audio.jukehost.co.uk/9enxXQaZQ4OAmD1FSxbyh4o17WdoNYX4",
+                            name: "Název písničky"
+                        }}%}                      
+                    </div>
+                    {# <div class="blog__audio-section u-pt-20">
+                        <h4>Ukázka z tvorby v2:</h4>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1452190555&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/h-ctor-guitarrista" title="Héctor Guitarrista 8" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/h-ctor-guitarrista/over-my-head" title="Over My Head - Sum 41 | Cover by Héctor Oliva" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
                     </div> #}
+                    <h4>Video ukázka:</h4>
                     <div class="blog__video-section">
-                        <div class="video">
-                            <iframe
-                            src="https://www.youtube.com/embed/_4C7Zr0qL8s">
-                            </iframe>
-                        </div>
+                        {% include "@components/box/video/video.twig" with { props: { 
+                            link: "https://www.youtube.com/embed/_4C7Zr0qL8s" 
+                        }}%}
                     </div>
                 </div>
                 <div class="blog__social">

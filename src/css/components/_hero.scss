@@ -1,6 +1,6 @@
 .hero {
     z-index: 10;
-    margin-top: -67px;
+    margin-top: -72px !important;
     position: relative;
     min-height: 500px;
     height: 100vh;
@@ -45,7 +45,8 @@
         font-size: 40px;
     }
     &__annot {
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
     &__timeline {
         position: absolute;
@@ -85,6 +86,7 @@
             font-size: 28px;
             line-height: 36px;
             text-align: center;
+            margin-bottom: 40px;
         }
         & .button-wrapper {
             padding-top: 40px;

@@ -4,6 +4,8 @@ import * as menu from './components/menu';
 import * as hero from './components/hero';
 import * as embla from './components/embla';
 import * as parallax from './components/parallax';
+import * as audio from './components/audio';
+import * as scrollTop from './components/scrollTop';
 import fslightbox from 'fslightbox';
 
 // content load components
@@ -15,7 +17,9 @@ const components = [
 	menu,
 	hero,
 	embla,
-	parallax
+	parallax,
+	audio,
+	scrollTop
 ].concat(componentsload);
 window.App = {
 	run() {

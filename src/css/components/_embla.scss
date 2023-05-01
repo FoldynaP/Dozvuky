@@ -11,11 +11,17 @@
         & .icon-svg {
             color: $colorWhite;
             width: 40px;
+            transition: color $t;
         }
     }
     &--prev &-inner {
         & .icon-svg {
             transform: rotate(180deg);
+        }
+    }
+    @media ($mdUp) {
+        .hoverevents &:hover .icon-svg {
+            color: $colorSecondary;
         }
     }
 }

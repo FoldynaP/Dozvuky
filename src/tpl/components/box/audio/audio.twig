@@ -1,0 +1,29 @@
+<audio>
+  <source src="{{ props.src }}"  type="audio/mp3">
+</audio> 
+<div class="audio-player" data-target-url="{{ props.src }}">
+  <div class="timeline">
+    <div class="progress"></div>
+  </div>
+  <div class="controls">
+    <div class="controls__inner">
+        <div class="play-container">
+        <div class="toggle-play play">
+        </div>
+        </div>
+        <div class="time">
+        <div class="current">0:00</div>
+        <div class="divider">/</div>
+        <div class="length"></div>
+        </div>
+    </div>
+    <div class="volume-container">
+      <div class="volume-button">
+        <div class="volume icono-volumeMedium">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "volume" }} %}</div>
+      </div>
+      <div class="volume-slider">
+        <div class="volume-percentage"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.carousel-news {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &__container {
+        position: relative;
+        display: flex;
+        margin-left: -24px;
+    }
+    &__item {
+        @extend %reset-anchor;
+        min-width: 87%;
+        border: 24px solid transparent;
+        border-width: 0 0 0 24px;
+    }
+    &__image {
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+    }
+    &__content {
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        background-color: #222222;
+    }
+    &__controls {
+        display: none;
+    }
+    @media ($mdUp) {
+        &__item {
+            min-width: 33.33%;
+        }
+        &__controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    }
+}

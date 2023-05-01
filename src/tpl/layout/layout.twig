@@ -101,7 +101,7 @@
 					},
 					{
 						title: "Novinky",
-						link: "#"
+						link: "/#news"
 					},
 					{
 						title: "Informace",
@@ -119,6 +119,9 @@
 			{% include "@components/core/footer/footer.twig" with { props: {
 				logo: "Logo-1.png",
 			}}%}
+			<div class="scroll-top js-scroll-top">
+				{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
+			</div>
 			{# <div class="modal js-modal u-hide">
 				<button class="modal__close js-modal-close"></button>
 				<div class="modal__body js-modal-body"></div>

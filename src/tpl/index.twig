@@ -92,15 +92,78 @@
                     title: "Neváhejte koupit lístek!",
                     tag: "h2",
                 }} %}
-                <h4 class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda</h4>
-                <div class="button-wrapper u-text-center" data-tippy-content="Click to copy button 49">
-                    <a target="_blank" href="https://www.ticketportal.cz/" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
+                <div class="tickets">
+                    <div class="tickets__title">
+                        <h4 class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda</h4>
+                    </div>
+                    <div class="tickets__button">
+                        <a target="_blank" href="https://www.ticketportal.cz/" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">1. Klikni na odkaz {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "ticket" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Klikni na odkaz výše a dostaň se na stránku ticketportal, kde můžeš koupit lístek na festival</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">2. Platba {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "pay" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Vyber si platbu a následně proveď úhradu. Část tvé vstupenky půjde na dobrou věc!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">3. Doraž {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "party" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Už zbývá jenom dorazit. Budeme se těšit. Vše vypukne 1.9. Více informací <a href="#">zde</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section section--top section--bottom">
+        <section class="section section--top section--bottom" id="news">
             <div class="container">
-                <p class="u-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium qui laborum aliquam tempora accusamus labore pariatur nesciunt atque quam praesentium assumenda, ducimus optio rerum distinctio, ratione neque, voluptatem amet necessitatibus! Aspernatur illo, quae assumenda voluptatem numquam temporibus, ex sit quod voluptate dolore iste repudiandae est! Minima, deserunt quod! Architecto, explicabo! Molestias, consequuntur quae iure saepe molestiae odit? Itaque, enim sint! Corrupti, voluptatum veritatis. Quis ipsam reprehenderit nam repudiandae quae consequuntur, aperiam, explicabo deserunt vel, tempora impedit porro aliquid! Ut, amet mollitia libero accusantium voluptas fuga quia aliquid et numquam laborum voluptate ratione provident, ab iure voluptatibus dolor sit iste doloribus.</p>
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Novinky",
+                    tag: "h2",
+                }} %}
+                {% set news = [
+                    {
+                        title: "Zahájení festivalu",
+                        img: "carousel-news/news1.webp",
+                        link: "#",
+                        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, modi!"
+                    },
+                    {
+                        title: "Noví sponzoři",
+                        img: "carousel-news/news2.webp",
+                        link: "#",
+                        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, modi!"
+                    },
+                    {
+                        title: "Spolupráce s redbullem",
+                        img: "carousel-news/news3.webp",
+                        link: "#",
+                        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, modi!"
+                    },
+                    {
+                        title: "375 m.n.m",
+                        img: "carousel-news/news1.webp",
+                        link: "#",
+                        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, modi!"
+                    },
+                ]%}
+                {% include "@components/box/carousel-news/carousel-news.twig" with { props: {
+                    loop: true,
+                    content: news,
+                }} %}
             </div>
         </section>
 	</main> 

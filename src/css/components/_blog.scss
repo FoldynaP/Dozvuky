@@ -1,13 +1,14 @@
 .blog {
     &__social {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         margin-top: 40px;
         align-items: center;
+        flex-wrap: wrap;
     }
     &__social-item {
         background-color: $colorWhite;
-        padding: 20px;
+        padding: 10px;
         border-radius: 10px;
         & .icon-svg {
             width: 40px;
@@ -31,9 +32,19 @@
             align-items: center;
             margin-top: 0;
             order: 0;
+            gap: 30px;
+        }
+        &__social-item {
+            padding: 30px;
+            & .icon-svg {
+                transition: transform $t;
+            }
         }
         &__text {
             flex: 0 1 70%;
+        }
+        .hoverevents &__social-item:hover .icon-svg {
+            transform: scale(1.2);
         }
     }
 }

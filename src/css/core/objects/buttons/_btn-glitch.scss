@@ -23,6 +23,15 @@
     cursor: pointer;
 }
 
+.btn-glitch__text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & .icon-svg--ticket {
+    width: 30px;
+  }
+}
+
 .btn-glitch:after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);

@@ -1,18 +1,10 @@
 .header {
     position: fixed;
-    margin-bottom: -70px;
     width: 100%;
+    margin: 0 auto;
     left: 0;
     right: 0;
     z-index: 20;
-    background: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    .menu-open & {
-        //background-color: $colorSecondary
-    }
     &__list {
         @extend %reset-ul;
         display: flex;
@@ -27,7 +19,7 @@
         bottom: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: $colorWhite;
+        background-color: #333333;
         transform: translateX(100%);
         transition: transform $t;
         &.is-open {
@@ -39,6 +31,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: linear-gradient(45deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,0) 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     &__logo {
         & img {
@@ -55,7 +52,7 @@
         text-transform: uppercase;
         font-weight: 600;
         font-size: 26px;
-        color: $colorBlack;
+        color: $colorWhite;
     }
     &__toggle {
 		height: 100%;

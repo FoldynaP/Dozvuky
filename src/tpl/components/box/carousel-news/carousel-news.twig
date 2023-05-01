@@ -1,0 +1,36 @@
+<div class="carousel-news js-embla" {% if props.loop %}data-carousel-loop="true"{% endif %}{% if props.carouselInterval %}data-carousel-interval="4000"{% endif %}>
+    <div class="embla__viewport">
+        <div class="carousel-news__container">
+            {% for item in props.content %}
+            <a href="{{ item.link }}" class="carousel-news__item">
+                <div class="carousel-news__image">
+                    {% include "@components/core/image/image.twig" with { item: {
+                        img: item.img,
+                        lazyload: true,
+                    }} %}
+                </div>
+                <div class="carousel-news__content">
+                    <h4 class="carousel-news__title">{{ item.title }}</h4>
+                    <p class="carousel-news__text">{{ item.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="carousel-news__controls">
+        <div class="embla__button embla__button--prev">
+            <button class="embla__button-inner">
+                {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
+            </button>
+        </div>
+        <div class="embla__button embla__button--next">
+            <button class="embla__button-inner">
+                {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
+            </button>
+        </div>
+    </div>
+    <div class="embla__dots"></div>
+    <div id="embla-dot-template">
+      <button class="embla__dot" type="button"></button>
+    </div>
+</div>
