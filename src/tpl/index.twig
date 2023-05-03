@@ -86,7 +86,7 @@
                 }} %}
             </div>
         </section>
-        <section class="section section--top section--bg" id="tickets">
+        <section class="section section--top" id="tickets">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
                     title: "Neváhejte koupit lístek!",
@@ -138,7 +138,7 @@
                     {
                         title: "Zahájení festivalu",
                         img: "carousel-news/news1.webp",
-                        link: "#",
+                        link: "/Novinky/zahajeni.html",
                         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, modi!"
                     },
                     {
@@ -164,6 +164,79 @@
                     loop: true,
                     content: news,
                 }} %}
+            </div>
+        </section>
+        <section class="section section--bg section--bottom">
+            <div class="container">
+                <div class="text-block u-text-center">
+                    <h2>Festival plný zážitků...</h2>
+                    <h4>Mrkni na minulé ročníky!</h4>
+                    <a target="_blank" href="/galerie.html" class="btn-glitch" role="button"><span class="btn-glitch__text">Galerie</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="section section--top" id="information">
+            <div class="container">
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Informace",
+                    tag: "h2",
+                }} %}
+                <div class="information">
+                    <div class="grid">
+                        <div class="grid__col col-6-12@md">
+                            <div class="information__location">
+                                <h4>Adresa Festivalu:</h4>
+                                <ul class="information__address">
+                                    <li>Fotbalový stadion Česká Třebová</li>
+                                    <li>Pod Jelenicí 597</li>
+                                    <li>Česká Třebová</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="grid__col col-6-12@md">
+                            <a target="_blank" href="https://www.google.com/maps/place/FK+%C4%8Cesk%C3%A1+T%C5%99ebov%C3%A1+s.r.o./@49.9098302,16.4326175,17z/data=!4m6!3m5!1s0x470df2305524dfcb:0x55656fdd82b16b6f!8m2!3d49.9098271!4d16.4349787!16s%2Fg%2F1txy111m" class="information__map">
+                                {% include "@components/core/image/image.twig" with { item: {
+                                    img: "map/map.webp",
+                                    lazyload: true,
+                                }} %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--top">
+            <div class="container">
+                {% set faqs =[
+                    {
+                        title: "Doprava a parkování",
+                        content: "1Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusantium laudantium ducimus autem. Quisquam, dolorem, itaque magnam non delectus aspernatur excepturi odit tenetur dicta doloribus omnis maiores veniam nisi repellendus!",
+                    },
+                    {
+                        title: "Bezbariérovost",
+                        content: "2Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusantium laudantium ducimus autem. Quisquam, dolorem, itaque magnam non delectus aspernatur excepturi odit tenetur dicta doloribus omnis maiores veniam nisi repellendus!",
+                    },
+                    {
+                        title: "Jídlo a pití",
+                        content: "3Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusantium laudantium ducimus autem. Quisquam, dolorem, itaque magnam non delectus aspernatur excepturi odit tenetur dicta doloribus omnis maiores veniam nisi repellendus!",
+                    },
+                ]%}
+                {% for item in faqs %}
+                {% include "@components/box/faq/faq.twig" %}
+                {% endfor %}
+            </div>
+        </section>
+        <section class="section section--top section--bottom" id="contact">
+            <div class="container">
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Kontakty",
+                    tag: "h2",
+                }} %}
+            </div>
+        </section>
+        <section class="section section--bg">
+            <div class="container">
+                {% include "@components/box/contact/contact.twig" %}
             </div>
         </section>
 	</main> 

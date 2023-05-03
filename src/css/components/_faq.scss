@@ -1,0 +1,47 @@
+.faq {
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 8px;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &__btn {
+        cursor: pointer;
+        position: relative;
+        h4 {
+            margin-bottom: 0;
+        }
+        &::after {
+			content: '';
+			position: absolute;
+			top: 40%;
+			right: 22px;
+			width: 11px;
+			height: 11px;
+			border: 2px solid $colorGrey;
+			border-width: 2px 2px 0 0;
+			transform: rotate(135deg) translate(-50%);
+			transform-origin: 0 50%;
+			transition: transform $t;
+			.is-open & {
+				transform: rotate(315deg) translate(-50%);
+				border-color: $colorWhite;
+			}
+		}
+    }   
+    &__content {
+        height: 0;
+        overflow: hidden;
+        transition: height $t;
+    }
+    @media ($mdUp) {
+        &__btn {
+            &::after {
+                top: 40%;
+                right: 22px;
+                width: 11px;
+                height: 11px;
+            }
+        }
+    }
+}

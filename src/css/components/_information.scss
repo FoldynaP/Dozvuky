@@ -1,0 +1,23 @@
+.information {
+    &__map {
+        overflow: hidden;
+        display: block;
+        & .image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        & img {
+            transition: transform $t;
+        }
+    }
+    &__address {
+        & li {
+            padding-left: 0;
+        }
+    }
+    @media ($mdUp) {
+        .hoverevents &__map:hover img {
+            transform: scale(1.1);
+        }
+    }
+}

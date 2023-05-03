@@ -30,10 +30,19 @@
         &__item {
             min-width: 33.33%;
         }
+        &__image {
+            overflow: hidden;
+            & img {
+                transition: transform $t;
+            }
+        }
         &__controls {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+        }
+        .hoverevents &__item:hover img {
+            transform: scale(1.1);
         }
     }
 }

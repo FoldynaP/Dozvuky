@@ -1,0 +1,6 @@
+.text-block {
+    padding: 60px 0;
+    @media ($mdUp) {
+        padding: 80px 0;
+    }
+}
