@@ -162,7 +162,10 @@
 <main role="main" id="main" class="main">
     <section class="section">
         <div class="container">
-            <a href="/Galerie.html" class="link-back">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %} Zpět</a>
+            <div class="link-back">
+                <a href="/Galerie.html" class="link-back__link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %} Zpět</a>
+                <a href="/" class="link-back__link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "home" }} %} Domů</a>
+            </div>
         </div>
     </section>
     <section class="section section--top section--bottom">

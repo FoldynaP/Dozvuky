@@ -15,9 +15,13 @@
                     alt: "úvodní fotka dozvuků léta",
                 },
                 {
-                    img: "hero/publikum.jpg",
-                    alt: "publikum",
-                }
+                    img: "hero/hero3.webp",
+                    alt: "Hudebník Voxedl",
+                },
+                {
+                    img: "hero/hero4.webp",
+                    alt: "Kapela Waldagang",
+                },
             ]
         }}%}
         <section class="section section-parallax">
@@ -86,7 +90,7 @@
                 }} %}
             </div>
         </section>
-        <section class="section section--top" id="tickets">
+        <section class="section section--top" id="listky">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
                     title: "Neváhejte koupit lístek!",
@@ -104,7 +108,7 @@
                             <div class="tickets__steps">
                                 <h4 class="tickets__step-title">1. Klikni na odkaz {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "ticket" }} %}</h4>
                                 <div class="tickets__step-content">
-                                    <p>Klikni na odkaz výše a dostaň se na stránku ticketportal, kde můžeš koupit lístek na festival</p>
+                                    <p>Klikni na odkaz výše a dostaň se na stránku ticketportal, kde můžeš koupit lístek na festival.</p>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +124,7 @@
                             <div class="tickets__steps">
                                 <h4 class="tickets__step-title">3. Doraž {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "party" }} %}</h4>
                                 <div class="tickets__step-content">
-                                    <p>Už zbývá jenom dorazit. Budeme se těšit. Vše vypukne 1.9. Více informací <a href="#">zde</a></p>
+                                    <p>Už zbývá jenom dorazit. Budeme se těšit. Vše vypukne 1.9. Více informací <a href="#">zde.</a></p>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +132,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section--top section--bottom" id="news">
+        <section class="section section--top section--bottom" id="novinky">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
                     title: "Novinky",
@@ -175,7 +179,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section--top" id="information">
+        <section class="section section--top" id="informace">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
                     title: "Informace",
@@ -183,9 +187,9 @@
                 }} %}
                 <div class="information">
                     <div class="grid">
-                        <div class="grid__col col-6-12@md">
-                            <div class="information__location">
-                                <h4>Adresa Festivalu:</h4>
+                        <div class="grid__col">
+                            <div class="information__location u-text-center">
+                                <h4>Místo konání Festivalu:</h4>
                                 <ul class="information__address">
                                     <li>Fotbalový stadion Česká Třebová</li>
                                     <li>Pod Jelenicí 597</li>
@@ -193,13 +197,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="grid__col col-6-12@md">
-                            <a target="_blank" href="https://www.google.com/maps/place/FK+%C4%8Cesk%C3%A1+T%C5%99ebov%C3%A1+s.r.o./@49.9098302,16.4326175,17z/data=!4m6!3m5!1s0x470df2305524dfcb:0x55656fdd82b16b6f!8m2!3d49.9098271!4d16.4349787!16s%2Fg%2F1txy111m" class="information__map">
-                                {% include "@components/core/image/image.twig" with { item: {
-                                    img: "map/map.webp",
-                                    lazyload: true,
-                                }} %}
-                            </a>
+                        <div class="grid__col">
+                            <iframe style="border:none" src="https://frame.mapy.cz/s/camabezoho" width="100%" height="500" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -232,11 +231,6 @@
                     title: "Kontakty",
                     tag: "h2",
                 }} %}
-            </div>
-        </section>
-        <section class="section section--bg">
-            <div class="container">
-                {% include "@components/box/contact/contact.twig" %}
             </div>
         </section>
 	</main> 

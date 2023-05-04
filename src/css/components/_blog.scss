@@ -7,9 +7,9 @@
         flex-wrap: wrap;
     }
     &__social-item {
-        background-color: $colorWhite;
+        background-color: #3333;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 50%;
         & .icon-svg {
             width: 40px;
             color: $colorSecondary;
@@ -17,7 +17,7 @@
     }
     &__text {
         padding: 30px;
-        background-color: #222222;
+        background-color: #3333;
         border-radius: 10px;
     }
     @media ($mdUp) {
@@ -37,7 +37,7 @@
         &__social-item {
             padding: 24px;
             & .icon-svg {
-                transition: transform $t;
+                transition: transform $t, color $t;
             }
         }
         &__text {
@@ -45,6 +45,7 @@
         }
         .hoverevents &__social-item:hover .icon-svg {
             transform: scale(1.2);
+            color: $colorWhite;
         }
     }
 }

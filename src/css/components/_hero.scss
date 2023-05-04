@@ -14,6 +14,7 @@
         margin-left: -100%;
         opacity: 0;
         transition: opacity 1s;
+        overflow: hidden;
         &::after {
             position: absolute;
             content: "";
@@ -26,10 +27,17 @@
             height: 100%;
             opacity: .5;
         }
+        & .image img {
+            transition: transform 10s;
+        }
         &.is-active {
             // margin-left: -100%;
             opacity: 1;
             margin-left: 0;
+            & .image img {
+                animation: scale linear;
+                animation-duration: 10s;
+            }
         }
     }
     &__content {
@@ -60,12 +68,14 @@
         border-radius: 0 5px 5px 0;
 
         .is-sliding & {
-            animation: scale linear forwards;
+            animation: scaleX linear forwards;
             animation-duration: var(--slide-duration);
         }
     }
-    & .button-wrapper {
-        padding-top: 20px;
+    & .btn-glitch {
+        & .icon-svg {
+            transform: rotate(-55deg);
+        }
     }
     @media ($mdUp) {
         //max-height: 800px;

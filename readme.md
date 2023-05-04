@@ -32,5 +32,5 @@ npm run build:pro
 ```
 
 ## Demo App
-
+Official website of festival Dozvuky Léta
 This website was made by Petr Foldyna.

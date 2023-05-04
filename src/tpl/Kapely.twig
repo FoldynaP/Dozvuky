@@ -18,13 +18,25 @@
     {
         img: "crossroad-bands/band1.webp",
         alt: "fotografie z festivalu, ročníku 2022",
-        title: "Sum 41",
+        title: "Arctic Monkeys",
         link: "#",
     },
     {
         img: "crossroad-bands/band1.webp",
         alt: "fotografie z festivalu, ročníku 2022",
-        title: "Sum 41",
+        title: "The Offspring",
+        link: "#",
+    },
+    {
+        img: "crossroad-bands/band1.webp",
+        alt: "fotografie z festivalu, ročníku 2022",
+        title: "Green Day",
+        link: "#",
+    },
+    {
+        img: "crossroad-bands/band1.webp",
+        alt: "fotografie z festivalu, ročníku 2022",
+        title: "Blink 182",
         link: "#",
     },
 ]%}
@@ -32,6 +44,13 @@
 {% block content %}
 
 <main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            <div class="link-back">
+                <a href="/" class="link-back__link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %} Zpět</a>
+            </div>
+        </div>
+    </section>
     <section class="section section--top-lg section--bottom">
         <div class="container">
             {% include "@components/core/title/title.twig" with { props: {

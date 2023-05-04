@@ -1,14 +1,16 @@
 <div class="contact">
-    <div class="grid">
-        <div class="grid__col col-6-12@md col-4-12@lg">
-            <div class="contact__item">
-                <h4 class="contact__title">Kontakt na Pořadatele</h4>
-                <ul class="contact__list">
-                    <li><a href="tel:+420 123 456 789">telefon: +420 123 456 789</a></li>
-                    <li><a href="mailto:email@domena.cz">email: email@domena.cz</a></li>
-                    <li><a href="tel:+420 123 456 789">něco: +420 123 456 789</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="contact__img">
+        {% include "@components/core/image/image.twig" with { item: {
+            img: props.img,
+            lazyload: true,
+        }} %}
+    </div>
+    <div class="contact__item">
+        <h4 class="contact__title">{{ props.title }}</h4>
+        <ul class="contact__list">
+            {% for item in props.contacts %}
+            <li>{{ item.text }}<a href="tel:+420 123 456 789">{{ item.value }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </div>

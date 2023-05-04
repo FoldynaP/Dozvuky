@@ -9,6 +9,7 @@
         </div>
         <div class="header__list-wrap">
             <ul class="header__list js-menu-content">
+                <a href="/" class="header__home">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "home" }} %}</a>
                 {% for item in props.items %}
                 <li class="header__item js-menu-link"><a href="{{ item.link }}" class="header__link">{{ item.title }}</a></li>
                 {% endfor %}
