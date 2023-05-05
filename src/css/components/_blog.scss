@@ -12,13 +12,14 @@
         border-radius: 50%;
         & .icon-svg {
             width: 40px;
-            color: $colorSecondary;
+            color: $colorText;
         }
     }
     &__text {
         padding: 30px;
         background-color: #3333;
         border-radius: 10px;
+        font-size: 20px;
     }
     @media ($mdUp) {
         display: flex;
@@ -44,8 +45,8 @@
             flex: 0 1 70%;
         }
         .hoverevents &__social-item:hover .icon-svg {
-            transform: scale(1.2);
-            color: $colorWhite;
+            transform: scale(1.1);
+            color: $colorSecondary;
         }
     }
 }

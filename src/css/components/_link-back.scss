@@ -31,4 +31,10 @@
     .hoverevents &__link:hover .icon-svg--back {
         transform: translateX(-10px);
     }
+    .hoverevents &__link:hover .icon-svg--home {
+        animation: tilt-shaking;
+        animation-iteration-count: infinite;
+        animation-duration: .3s;
+        transform: scale(1.2);
+    }
 }

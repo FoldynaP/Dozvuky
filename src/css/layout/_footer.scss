@@ -1,9 +1,15 @@
 .footer {
     position: relative;
-    //background: url($imgPath + '/illust/patterns/black-pattern.jpg');
-    background-color: $colorBlack;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url($imgPath + '/illust/bg/footerBg.webp');
     background-size: cover;
+    background-position: center;
     padding: 40px 0;
+    h4 {
+        font-size: 20px;
+    }
+    p,a,li {
+        font-size: 18px;
+    }
     &__wrap {
         color: $colorWhite;
         margin-bottom: 0;
@@ -18,6 +24,27 @@
         & img {
             max-width: 160px;
         }
+    }
+    &__contacts {
+        color: $colorBlack10;
+        h2,h3,h4 {
+            color: $colorBlack10;
+        }
+        ul {
+            li {
+                padding-left: 0;
+                &::before {
+                    color: $colorBlack10;
+                }
+                a {
+                    text-decoration: none;
+                    color: $colorBlack10;
+                }
+            }
+        }
+    }
+    &__contact-logo {
+        max-width: 160px;
     }
     &__socials {
         display: flex;
@@ -56,6 +83,14 @@
             display: flex;
             justify-content: center;
         }
+    }
+    &__copyright {
+        font-size: 14px;
+        color: $colorBlack20;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -60px;
     }
     .hoverevents &__social-link:hover {
         border-color: $colorWhite;

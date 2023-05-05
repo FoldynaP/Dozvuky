@@ -6,7 +6,7 @@ $gradientPrimary: linear-gradient(180deg, $colorSecondary, $colorTerciary);
 $colorBlack: #000000;
 $colorGrey: #a5a5a5;
 $colorWhite: #ffffff;
-$colorText: #ffffff;
+$colorText: #f3f3f3;
 
 $colorBlack80: #333333;
 $colorBlack60: #666666;
@@ -23,7 +23,6 @@ $colorYellow: #ffcc01;
 $colorBlue: #151e3b;
 $colorGold: #ac8543;
 
-$colorText: $colorWhite;
 $colorBd: #dddddd;
 $colorBg: #eeeeee;
 $colorLink: $colorPrimary;
@@ -41,7 +40,7 @@ $colorPinterest: #bd081c;
 $fontSystem: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif;
 $fontPrimary: 'gillsansmt', $fontSystem;
 $fontSecondary: 'gillsansmt', $fontPrimary;
-$fontSize: 20px;
+$fontSize: 18px;
 $lineHeight: 1.5;
 
 // Typography

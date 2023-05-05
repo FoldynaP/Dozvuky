@@ -204,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section--top">
+        <section class="section section--top section--bottom">
             <div class="container">
                 {% set faqs =[
                     {
@@ -223,14 +223,6 @@
                 {% for item in faqs %}
                 {% include "@components/box/faq/faq.twig" %}
                 {% endfor %}
-            </div>
-        </section>
-        <section class="section section--top section--bottom" id="contact">
-            <div class="container">
-                {% include "@components/core/title/title.twig" with { props: {
-                    title: "Kontakty",
-                    tag: "h2",
-                }} %}
             </div>
         </section>
 	</main> 

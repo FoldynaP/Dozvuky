@@ -129,4 +129,40 @@
         }
       }
     }
+    .playing {
+      background: rgba(255,255,255,.1);
+      width: 2rem;
+      height: 2rem;
+      border-radius: .3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: .5rem;
+      box-sizing: border-box;
+    }
+    
+    .playing__bar {
+      display: inline-block;
+      background: white;
+      width: 30%;
+      height: 20%;
+      transition: height $t;
+      &.active {
+        animation: music 1.3s ease infinite alternate;
+        &.playing__bar1 {
+          height: 60%;
+        }
+        
+        &.playing__bar2 {
+          height: 30%;
+          animation-delay: -2.2s;
+        }
+        
+        &.playing__bar3 {
+          height: 75%;
+          animation-delay: -3.7s;
+        }
+      }
+    }
+    
   }

@@ -48,16 +48,23 @@ export const init = () => {
 
 //toggle between playing and pausing on button click
     const playBtn = audioPlayer.querySelector(".controls .toggle-play");
+    const playBars = audioPlayer.querySelectorAll(".playing__bar");
     playBtn.addEventListener(
     "click",
     () => {
         if (audio.paused) {
         playBtn.classList.remove("play");
         playBtn.classList.add("pause");
+        playBars.forEach((item) =>{
+            item.classList.add("active");
+        })
         audio.play();
         } else {
         playBtn.classList.remove("pause");
         playBtn.classList.add("play");
+        playBars.forEach((item) =>{
+            item.classList.remove("active");
+        })
         audio.pause();
         }
     },
