@@ -9,7 +9,6 @@ export const init = () => {
     function scrollFunction() {
     if (document.body.scrollTop > 1080 || document.documentElement.scrollTop > 1080) {
         btn.classList.add(ACTIVE_CLASS);
-        console.log("true")
     } else {
         btn.classList.remove(ACTIVE_CLASS);
     }
