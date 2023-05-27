@@ -1,0 +1,20 @@
+<div class="breadcrumbs">
+    <div class="breadcrumbs__items">
+            <div class="breadcrumbs__item">
+                <a href="/">
+                    {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "home" }} %}
+                    Domů
+                </a>
+            </div>
+            {% for item in props.items %}
+            <div class="breadcrumbs__item">
+            {% if loop.last %}
+                <span>{{item.link}}</span>
+            {% else %}
+                <a href="{{item.url}}">{{item.link}}</a>
+            {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

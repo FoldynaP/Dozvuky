@@ -7,10 +7,17 @@
 <main role="main" id="main" class="main">
     <section class="section">
         <div class="container">
-            <div class="link-back">
-                <a href="/" class="link-back__link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "home" }} %} Domů</a>
-                <a href="/kapely.html" class="link-back__link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "back" }} %} Zpět</a>
-            </div>
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "375mnm",
+                    }
+                ]
+            }} %}
         </div>
     </section>
     <section class="section">
