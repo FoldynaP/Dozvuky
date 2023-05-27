@@ -20,7 +20,7 @@
         bottom: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: #333333;
+        background-color: #111111;
         transform: translateX(100%);
         transition: transform $t;
         &.is-open {
