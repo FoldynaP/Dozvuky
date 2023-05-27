@@ -2,6 +2,7 @@
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url($imgPath + '/illust/bg/footerBg.webp');
     background-size: cover;
     background-position: center;
+    // background-color: #3333;
     padding: 40px 0;
     h4 {
         font-size: 20px;
@@ -29,11 +30,14 @@
         h2,h3,h4 {
             color: $colorBlack10;
         }
+    }
+    &__contact {
         ul {
             li {
                 padding-left: 0;
+                margin-bottom: 0;
                 &::before {
-                    color: $colorBlack10;
+                    display: none;
                 }
                 a {
                     text-decoration: none;
@@ -41,6 +45,9 @@
                 }
             }
         }
+    }
+    &__contact-name {
+        margin-bottom: 10px;
     }
     &__contact-logo {
         max-width: 160px;
@@ -68,13 +75,33 @@
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
-    &__owner {
-        display: flex;
-        gap: 20px;
+    &__logo {
+        text-align: center;
+        // &--left {
+        //     text-align: right;
+        // }
     }
-    &__social-wrap {
+    &__social {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__sponsors {
         display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+    &__sponsor-item {
+        text-align: center;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
         flex-direction: column;
+        .image img {
+            width: auto;
+            max-height: 40px;
+        }
     }
     &__created {
         color: $colorBlack40;

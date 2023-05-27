@@ -21,10 +21,27 @@
         border-radius: 10px;
         font-size: 20px;
     }
+    &__gallery {
+        padding-top: 40px;
+    }
+    &__gallery-item {
+        aspect-ratio: 16/10;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
     @media ($mdUp) {
         display: flex;
         justify-content: center;
         gap: 40px;
+        &__section {
+                margin-top: 40px;
+        }
         &__social {
             position: sticky;
             height: 100%;

@@ -5,52 +5,98 @@
                 title: "Kontakty",
                 tag: "h3",
             }} %}
-            <div class="grid">
-                <div class="grid__col col-4-12@md">
-                    <div class="footer__contact-logo">
-                        {% include "@components/core/image/image.twig" with { item: {
-                            img: "footer/provasodnas.png"
-                        }} %}
+            <div class="grid grid--center">
+                <div class="grid__col col-3-12@md">
+                    <div class="footer__contact">
+                        <h4>Spolek Pro Vás od Nás:</h4>
+                        <ul>
+                            <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
+                            <li>mail: <a href="mailto:provasodnas@domena.cz">provasodnas@domena.cz</a></li>
+                        </ul>
                     </div>
-                    <h4>Spolek Pro Vás od Nás:</h4>
-                    <ul>
-                        <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
-                        <li>mail: <a href="mailto:provasodnas@domena.cz">provasodnas@domena.cz</a></li>
-                    </ul>
                 </div>
-                <div class="grid__col col-4-12@md">
-                    <h4>Pořadatelé:</h4>
-                    <span>Tomáš Kupka:</span>
-                    <ul>
-                        <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
-                        <li>mail: <a href="mailto:email@domena.cz">tomas.kupka@domena.cz</a></li>
-                    </ul>
-                    <span>Jiří Holý</span>
-                    <ul>
-                        <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
-                        <li>mail: <a href="mailto:email@domena.cz">jiri.holy@domena.cz</a></li>
-                    </ul>
+                <div class="grid__col col-3-12@md">
+                    <div class="footer__contact">
+                        <h4>Pořadatelé:</h4>
+                        <span>Tomáš Kupka:</span>
+                        <ul>
+                            <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
+                            <li>mail: <a href="mailto:email@domena.cz">tomas.kupka@domena.cz</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="grid__col col-4-12@md">
-                    <h4>Kapely a stánkový provoz:</h4>
-                    <span>Tomáš Kupka:</span>
-                    <ul>
-                        <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
-                        <li>mail: <a href="mailto:email@domena.cz">tomas.kupka@domena.cz</a></li>
-                    </ul>
-                    <span>Jiří Holý</span>
-                    <ul>
-                        <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
-                        <li>mail: <a href="mailto:email@domena.cz">jiri.holy@domena.cz</a></li>
-                    </ul>
+                <div class="grid__col col-3-12@md">
+                    <div class="footer__contact">
+                        <h4>Kapely a stánkový provoz:</h4>
+                        <span>Tomáš Kupka:</span>
+                        <ul>
+                            <li>tel: <a href="tel:+420 123 456 789">+420 123 456 789</a></li>
+                            <li>mail: <a href="mailto:email@domena.cz">tomas.kupka@domena.cz</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <h4 class="u-text-center">Sledujte nás na sociálních sítích:</h4>
-        <div class="footer__socials">
-            <a target="_blank" href="https://www.facebook.com/provasodnas" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
-            <a target="_blank" href="https://www.instagram.com/dozvuky_leta/" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
-            <a target="_blank" href="#" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "twitter" }} %}</a>
+        <div class="footer__social">
+            <div class="grid">
+                <div class="grid__col col-4-12@md">
+                    <div class="footer__logo footer__logo--left">
+                        {% include "@components/core/image/image.twig" with { item: {
+                            img: "logo.png"
+                        }} %}
+                    </div>
+                </div>
+                <div class="grid__col col-4-12@md">
+                    <h4 class="u-text-center">Sledujte nás na sociálních sítích:</h4>
+                    <div class="footer__socials">
+                        <a target="_blank" href="https://www.facebook.com/provasodnas" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
+                        <a target="_blank" href="https://www.instagram.com/dozvuky_leta/" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                        <a target="_blank" href="#" class="footer__social-link">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "twitter" }} %}</a>
+                    </div>
+                </div>
+                <div class="grid__col col-4-12@md">
+                    <div class="footer__logo">
+                        {% include "@components/core/image/image.twig" with { item: {
+                            img: "logo-test.png"
+                        }} %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% include "@components/core/title/title.twig" with { props: {
+            title: "Sponzoři",
+            tag: "h3",
+        }} %}
+        <div class="footer__sponsors">
+            <div class="footer__sponsor-item">
+                <div class="footer__sponsor-image">
+                    {% include "@components/core/image/image.twig" with { item: {
+                        img: "sponsors/pardubice.png"
+                    }} %}
+                </div>
+            </div>
+            <div class="footer__sponsor-item">
+                <div class="footer__sponsor-image">
+                    {% include "@components/core/image/image.twig" with { item: {
+                        img: "sponsors/techplast.png"
+                    }} %}
+                </div>
+            </div>
+            <div class="footer__sponsor-item">
+                <div class="footer__sponsor-image">
+                    {% include "@components/core/image/image.twig" with { item: {
+                        img: "sponsors/znak.png"
+                    }} %}
+                </div>
+            </div>
+            <div class="footer__sponsor-item">
+                <div class="footer__sponsor-image">
+                    {% include "@components/core/image/image.twig" with { item: {
+                        img: "sponsors/znak2.png"
+                    }} %}
+                </div>
+            </div>
         </div>
         {# <div class="footer__copyright">&#169 Petr Foldyna, 2023. IČO: 467 798 632, mail: petr.foldyna12@gmail.com tel: +420 606 767 826</div> #}
         <div class="footer__copyright">&#169 Pro Vás od Nás 2023</div>

@@ -2,6 +2,21 @@
 {% set pageTitle = 'Dozvuky léta - Arctic Monkeys' %}
 {% set description = 'Arctic monkeys je rocková kapela, která bude účinkovat na festivalu dozvuky léta 1.9.2023.' %}
 
+{% set blogGallery = [
+    {
+        img: "carousel-news/news1.webp",
+        alt: "Popisek obrázku",
+    },
+    {
+        img: "carousel-news/news2.webp",
+        alt: "Popisek obrázku",
+    },
+    {
+        img: "carousel-news/news3.webp",
+        alt: "Popisek obrázku",
+    },
+]%}
+
 {% block content %}
 
 <main role="main" id="main" class="main">
@@ -12,7 +27,7 @@
             </div>
         </div>
     </section>
-    <section class="section section--top">
+    <section class="section">
         <div class="container">
             {% include "@components/box/main-image/main-image.twig" with { props: {
                 img: "news/zahajeni.webp",
@@ -41,7 +56,21 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore totam aspernatur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, quis similique non iste et minima nisi amet est modi voluptates asperiores corrupti quia doloremque velit deserunt fuga! Harum, ut expedita. Quia reprehenderit aliquam ea nulla iste nostrum harum aut expedita! Et unde nihil ea, voluptates dolorem nisi recusandae molestias, eligendi quidem dolores nostrum, quis blanditiis! Officia cumque excepturi necessitatibus impedit debitis, quam a rem! Consectetur nam sequi sapiente placeat, aliquid ex dolore incidunt, tempore aspernatur quas ullam aliquam soluta assumenda id reprehenderit necessitatibus magnam modi corporis deserunt! Nihil, architecto, omnis explicabo id alias facere molestiae enim, perspiciatis eligendi hic ab! ipsum voluptas quaerat nam sunt quibusdam aliquid at eligendi iure, nemo quidem laboriosam excepturi veritatis cum officia possimus illo numquam ea debitis deserunt atque. Veritatis dolor commodi fuga!</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et incidunt tempore accusamus vel minima doloremque voluptatibus libero praesentium asperiores ut.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia, dolores, eligendi quibusdam quisquam aspernatur nisi expedita omnis non quod iusto beatae? Ab commodi incidunt totam maxime ad ea accusamus?</p>
+                    <div class="blog__gallery">
+                        <div class="grid">
+                            {% for item in blogGallery %}
+                            <div class="grid__col col-6-12@md">
+                              <div class="blog__gallery-item">
+                                {% include "@components/box/gallery-item/gallery-item.twig" with {props: {
+                                    galleryName: "galleryZahajeni"
+                                }} %}
+                              </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="blog__social">
                     <span>Sociální sítě:</span>
                     <a target="_blank" href="https://www.facebook.com/375mnm" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
