@@ -1,0 +1,59 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Safari Expres' %}
+{% set description = 'Na festivalu dozvuky léta v České Třebové pod Peklákem, bude letos účinkovat kapela Safari Expres' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "Safari Expres",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/08_SafariExpres.jpeg",
+                alt: "Safari Expres",
+                title: "Safari Expres",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Safari Expres",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Původně brněnská kapela Skákající králíčci na přelomu roku dostala nový rytmický náboj třebovské krve a proměnila se tak doslova v brněnsko-třebovský fusion – nově však pod názvem Safari Express. Studentský léta jsou pryč, ale Safari Express zůstává věrný svým kořenům inspirovaným mňágovským rockem se ságem v zádech, který Vám tentokrát bude servírovat v nádražní baště republiky – České Třebové – na Dozvucích léta! Tímhle expresem na Dozvuky léta dorazí Honza Sádovský - sólová kytara a zpěv,	 Jirka Palíšek – doprovodná kytara a zpěv, Filip Škorňa - basová kytara, Tomáš Dvořák – saxofon a Natka Burešová – bicí.</p>
+                    <p>Čas vystoupení: Sobota 2. 9. od 17:00</p>
+                </div>
+                {# <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/adamcurikoficial" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://www.instagram.com/excitedband/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                    <a target="_blank" href="https://youtu.be/DQC6NxUhVUc" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div> #}
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

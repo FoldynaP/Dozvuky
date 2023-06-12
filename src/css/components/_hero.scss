@@ -53,7 +53,8 @@
         font-size: 40px;
     }
     &__annot {
-        margin-top: 0;
+        max-width: 55ch;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
     &__timeline {

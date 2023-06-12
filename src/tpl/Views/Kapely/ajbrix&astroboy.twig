@@ -1,0 +1,60 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - AJ Brix &Astro Boy' %}
+{% set description = 'Na festivalu dozvuky léta v České Třebové pod Peklákem, bude letos účinkovat kapela AJ Brix &Astro Boy' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "AJ Brix &Astro Boy",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/09_AjBrix_AstroBoy.jpeg",
+                alt: "AJ Brix &Astro Boy",
+                title: "AJ Brix &Astro Boy",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "AJ Brix &Astro Boy",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>AJ Brix je charismatický mladý rapper, reprezentující hlas mladé generace. Velmi dobře zapadl do české rapové komunity, a to nejen oblibou u fanoušků, ale i u ostatních umělců. Mezi dosud nejúspěšnější singly AJ Brixe patří No Limit, který překonal hranici čtyř milionů streamů na Spotify (ve spolupráci s rapperem Earth) a track Nějaká doba, který se stal velmi populární u tvůrců a fanoušků na sociální síti TikTok. Početné views a streamy získává rapper svými posledními virálními tracky Tracey a Nebavíme, jež se po releasu umístily v Top 50 na Spotify a Top 10 hudebních trendů na YouTube. Začátkem května vydal svůj první ucelený projekt v podobě debutového alba Nemůžu tě držet za ruku. Ten obsahuje hity s miliony streamů a představuje vyznání pocitů z jeho náročné životní etapy. </p>
+                    <p>Astro Boy je hudebník, který je na scéně krátkou dobu ale za tu chvíli se jeho progres zvětšuje velkou rychlostí. Jeho singly jsou v éteru velmi populární. Jeden z jeho novějších singlů Sunset ve spolupráci s AJem Brixem se dostal přes hranici 500 000 streamů na streamovacích platformách. Přeskočil hranici 25 000 posluchačů měsíčně na Spotify a stále roste. Momentálně má v šuplíku spoustu nových singlů, které bude postupně vypouštět do světa. Máme se na co těšit.</p>
+                    <p>Čas vystoupení: Sobota 2. 9. od 18:30</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/ajbrixofficial " class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://www.instagram.com/boyastro_here/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                    <a target="_blank" href="https://youtu.be/0ZVLJwCPGWE" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

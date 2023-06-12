@@ -20,6 +20,7 @@
         border-radius: 8px;
         width: 100%;
         overflow: hidden;
+        aspect-ratio: 5/7;
         & img {
             transition: transform 3s;
         }
@@ -71,6 +72,9 @@
         & .icon-svg {
             transform: rotate(180deg);
         }
+    }
+    &__description {
+        @include line-clamp(6);
     }
     @media ($mdUp) {
         &__item {

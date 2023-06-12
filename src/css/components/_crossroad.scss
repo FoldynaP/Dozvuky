@@ -7,6 +7,7 @@
         border-radius: 8px;
         overflow: hidden;
         position: relative;
+        aspect-ratio: 16/10;
         & img {
             transition: transform $t;
         }

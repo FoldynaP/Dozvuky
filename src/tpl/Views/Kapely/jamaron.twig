@@ -1,0 +1,59 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Jamaron' %}
+{% set description = 'Na festivalu dozvuky léta v České Třebové pod Peklákem, bude letos účinkovat kapela Jamaron' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "Jamaron",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/03_Jamaron.jpg",
+                alt: "Jamaron",
+                title: "Jamaron",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Jamaron",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Tato česká rocková kapela v čele s charismatickou frontwoman Marií Dostálovou, jejíž výrazný hlas obklopený hutným zvukem elektrických kytar a nekompromisních bicích je dominantou této mladé pětice. Jamaron si zakládají na srozumitelných a smysluplných českých textech, se kterými se řada posluchačů snadno ztotožní. Další devizou jsou silné chytlavé refrény a mladistvá energie, která se na posluchače valí z pódia při každém jejich koncertě. Nejen z tohoto důvodu jsou řazeni mezi nejzajímavější mladé rockové kapely současnosti. To dokazuje i její vítězství v Anketě Žebřík, ve které získali cenu Objev roku 2020. Kapelu založili v roce 2013 sourozenci Jakub, Marie a Ondřej Dostálovi, proto tedy JaMarOn. Sourozenecké trio doplňují bubeník Václav Hejda a baskytarista Filip Karlík. Všichni jsou od dětství propojeni hudbou a svázáni společným cílem sdělovat skrze tvorbu svoje pocity, názory a přesvědčení.</p>
+                    <p>Čas vystoupení: Pátek 1. 9. od 19:00</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/jamaronofficial" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://www.instagram.com/jamaronofficial/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                    <a target="_blank" href="https://youtu.be/7YCmQwPJAS4" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

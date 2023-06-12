@@ -1,0 +1,59 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Michal Hrůza' %}
+{% set description = 'Na festivalu dozvuky léta v České Třebové pod Peklákem, bude letos účinkovat kapela Michal Hrůza' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "Michal Hrůza & kapela Hrůzy",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/10_MIchalHruza.jpg",
+                alt: "Michal Hrůza & kapela Hrůzy",
+                title: "Michal Hrůza & kapela Hrůzy",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Michal Hrůza & kapela Hrůzy",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Michal Hrůza je český zpěvák a zakládající člen skupiny Ready Kirken. Hudbě se začal věnovat na střední vojenské škole, kde byl členem školní hudební skupiny a kde hrál amatérské divadlo. Jeho skladba pro Anetu Langerovou Voda živá byla v letech 2005 a 2006 hitem roku. V roce 2006 skupinu opustil a založil Kapelu HRŮZY, natočil album Bílá velryba (2007), Napořád (2009) a Noc (2012), podílel se i na hudbě k filmu Lidice (2011) a filmu Martin a Venuše (2012). Je autorem i mnoha televizních znělek například pro seriál Vyprávěj, Mazalové a Mistr E.</p>
+                    <p>Čas vystoupení: Sobota 2. 9. od 20:00</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/michalhruza" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://www.instagram.com/michalhruza/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                    <a target="_blank" href="https://youtu.be/Cr7gT64eZGc " class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

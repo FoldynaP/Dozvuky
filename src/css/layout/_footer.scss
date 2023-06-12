@@ -68,6 +68,9 @@
             width: 30px;
             transition: all 0.3s;
         }
+        &--ticket {
+            background-color: $colorSecondary;
+        }
     }
     &__top {
         display: flex;
@@ -100,7 +103,7 @@
         flex-direction: column;
         .image img {
             width: auto;
-            max-height: 40px;
+            max-height: 70px;
         }
     }
     &__created {

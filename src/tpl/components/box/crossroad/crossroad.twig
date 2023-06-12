@@ -1,4 +1,4 @@
-<a href="{{ item.link }}" class="crossroad">
+<a {% if item.blank %}target="_blank"{% endif %} href="{{ item.link }}" class="crossroad">
     <div class="crossroad__img">
         {% include "@components/core/image/image.twig" with { item: {
             img: item.img,

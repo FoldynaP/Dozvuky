@@ -1,0 +1,58 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Husý krk' %}
+{% set description = 'Na festivalu dozvuky léta v České Třebové pod Peklákem, bude letos účinkovat kapela Husý krk' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely.html",
+                    },
+                    {
+                        link: "Husý krk",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/13_HusýKrk.jpg",
+                alt: "Husý krk",
+                title: "Husý krk",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Husý krk",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Mladá kapela, jejíž členové pochází z údolí potoku Husí krk, si už třetím rokem hraje vlastními slovy „co chce“. Za sebou mají tito tři borci již vystoupení na PunkOff ve vodáckém tábořišti Cakle, DosiFestu ve Sloupnici, Přívratském vinobraní,  Festivalu mladých kapel v Sobkovicích a Benátské noci v Bystřeci.</p>
+                    <p>Čas vystoupení: Sobota 2. 9. od 00:30</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/Husy.KrK " class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</ab>
+                    <a target="_blank" href="https://youtu.be/lnYgY28MWwc " class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
