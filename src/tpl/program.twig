@@ -1,0 +1,50 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Program' %}
+{% set description = 'Letošní ročník festivalu Dozvuky léta v České Třebové pod Peklákem, nabízí opravdu bohatý program. Festival se koná celé 2 dny! Můžete se těšit na interprety jako Michal Hrůza, Paulie Garand, Marpo a spoustu dalších i místních kapel. Neváhejte a kupujte lístky, dokud jsou ještě k mání!' %}
+
+{% set program = [
+    {
+        img: "program/PATEK.webp",
+        title: "Pátek 01.09. 2023:",
+    },
+    {
+        img: "program/SOBOTA.webp",
+        title: "Sobota 02.09. 2023:",
+    }
+]%}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "program",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    {% for item in program %}
+    <section class="section section--top section--bottom">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: item.title,
+                tag: "h2",
+            }} %}
+            {# {% include "@components/box/program-table/program-table.twig" with { props: {
+
+            }} %} #}
+            <div class="program-wrap">
+                {% include "@components/core/image/image.twig" with { item: {
+                    img: item.img,
+                }} %}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+</main>
+
+{% endblock %}
