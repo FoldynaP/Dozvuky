@@ -8,7 +8,7 @@
 	<main role="main" id="main" class="main">
 		{% include "@components/box/hero/hero.twig" with { props: {
             timeInterval: "8000",
-            annot: "pátek 1. a sobota 2. září na fotbalovém stadionu Pod Jelenicí v České Třebové",
+            annot: "Těšíme se společně na další ročník!",
             images: [
                 {
                     img: "hero/hero1.jpg",
@@ -44,10 +44,17 @@
                 </svg>
             </div>
         </section>
+        <section class="section section--top section--bottom" id="listky">
+            <div class="container">
+                {% include "@components/core/title/title.twig" with { props: {
+                    title: "Děkujeme za podporu!",
+                    tag: "h2",
+                }} %}
+                <h4 class="u-text-center">Děkujeme, že jste dorazili na letošní ročník. Vážíme si Vaší podpory a těšíme se na ročník 2024!</h4>
         <section class="section section--top section--bottom">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
-                    title: "Kapely",
+                    title: "Kapely ročníku 2023",
                     tag: "h2",
                 }} %}
                 {% set bands = [
@@ -149,7 +156,7 @@
                 }} %}
             </div>
         </section>
-        <section class="section section--top section--bottom" id="listky">
+        {# <section class="section section--top section--bottom" id="listky">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
                     title: "Neváhejte koupit lístek!",
@@ -190,7 +197,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> #}
         {# SEKCE NOVINKY PROZATÍM SCHOVANÁ #}
         {# <section class="section section--top section--bottom" id="novinky">
             <div class="container">
@@ -259,7 +266,7 @@
                             </div>
                         </div>
                         <div class="grid__col">
-                            <iframe style="border:none" src="https://frame.mapy.cz/s/camabezoho" width="100%" height="500" frameborder="0"></iframe>
+                            <iframe title="mapa" style="border:none" src="https://frame.mapy.cz/s/camabezoho" width="100%" height="500" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>

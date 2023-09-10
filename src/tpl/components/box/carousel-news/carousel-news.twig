@@ -19,18 +19,18 @@
     </div>
     <div class="carousel-news__controls">
         <div class="embla__button embla__button--prev">
-            <button class="embla__button-inner">
+            <button class="embla__button-inner" name="previous">
                 {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
             </button>
         </div>
         <div class="embla__button embla__button--next">
-            <button class="embla__button-inner">
+            <button class="embla__button-inner" name="next">
                 {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "arrow" }} %}
             </button>
         </div>
     </div>
     <div class="embla__dots"></div>
     <div id="embla-dot-template">
-      <button class="embla__dot" type="button"></button>
+      <button name="control" class="embla__dot" type="button"></button>
     </div>
 </div>
