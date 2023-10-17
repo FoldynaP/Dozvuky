@@ -4,10 +4,10 @@
 
 {% set crossroads = [
     {
-        img: "crossroad-gallery/galerie1.webp",
-        alt: "fotografie z festivalu, ročníku 2021",
-        title: "Ročník 2021",
-        link: "https://provasodnas.rajce.idnes.cz/Dozvuky_leta_2021/",
+        img: "crossroad-gallery/galerie2023.webp",
+        alt: "fotografie z festivalu, ročníku 2023",
+        title: "Ročník 2023",
+        link: "https://martinsevera.pixellu.gallery/dozvuky-leta-2023/all?fbclid=IwAR38oFujGqszfXJwYQR1hkerF_j859L4KXXM4uRAQ-4tjzKsJTxdJEc9fUo",
         blank: true
     },
     {
@@ -16,6 +16,13 @@
         title: "Ročník 2022",
         link: "https://martinsevera.pic-time.com/-newgallery2/gallery",
         blank: true,
+    },
+    {
+        img: "crossroad-gallery/galerie1.webp",
+        alt: "fotografie z festivalu, ročníku 2021",
+        title: "Ročník 2021",
+        link: "https://provasodnas.rajce.idnes.cz/Dozvuky_leta_2021/",
+        blank: true
     },
 ]%}
 
@@ -41,7 +48,7 @@
             }} %}
             <div class="grid grid--center">
             	{% for item in crossroads %}
-                <div class="grid__col col-6-12@sm">
+                <div class="grid__col col-4-12@sm">
                     {% include "@components/box/crossroad/crossroad.twig" %}
                 </div>
                 {% endfor %}
