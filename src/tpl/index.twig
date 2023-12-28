@@ -8,7 +8,7 @@
 	<main role="main" id="main" class="main">
 		{% include "@components/box/hero/hero.twig" with { props: {
             timeInterval: "8000",
-            annot: "Těšíme se společně na další ročník!",
+            annot: "30.08.-31.08.2024  v České Třebové<br>na fotbalovém hřišti pod Peklákem",
             images: [
                 {
                     img: "hero/hero1.jpg",
@@ -47,10 +47,45 @@
         <section class="section section--top section--bottom" id="listky">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
-                    title: "Děkujeme za podporu!",
+                    title: "Neváhejte koupit lístek!",
                     tag: "h2",
                 }} %}
-                <h4 class="u-text-center">Děkujeme, že jste dorazili na letošní ročník. Vážíme si Vaší podpory a těšíme se na ročník 2024!</h4>
+                <div class="tickets">
+                    <div class="tickets__title">
+                        <h4 class="u-text-center">Aktuálně probíhá první vlna prodeje lístků. Neotálejte a kupte si lístek za výhodnou cenu!</h4>
+                    </div>
+                    <div class="tickets__button">
+                        <a target="_blank" href="https://www.ticketportal.cz/event/DOZVUKY-LETA-2024?idp=1388053#modalVyberPocetMiest20" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
+                    </div>
+                    <div class="grid">
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">1. Klikni na odkaz {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "ticket" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Klikni na odkaz výše a dostaň se na stránku ticketportal, kde můžeš koupit lístek na festival.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">2. Platba {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "pay" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Vyber si platbu a následně proveď úhradu. Část tvé vstupenky půjde na dobrou věc!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col col-6-12@md col-4-12@lg">
+                            <div class="tickets__steps">
+                                <h4 class="tickets__step-title">3. Doraž {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "party" }} %}</h4>
+                                <div class="tickets__step-content">
+                                    <p>Už zbývá jenom dorazit. Budeme se těšit. Vše vypukne 30. 8. 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section section--top section--bottom">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
@@ -156,48 +191,6 @@
                 }} %}
             </div>
         </section>
-        {# <section class="section section--top section--bottom" id="listky">
-            <div class="container">
-                {% include "@components/core/title/title.twig" with { props: {
-                    title: "Neváhejte koupit lístek!",
-                    tag: "h2",
-                }} %}
-                <div class="tickets">
-                    <div class="tickets__title">
-                        <h4 class="u-text-center">Aktuálně probíhá první vlna prodeje lístků. V rámci předprodeje můžete získat dvoudenní lístek za cenu denního vstupného. S nákupem tedy rozhodně nedoporučujeme otálet</h4>
-                    </div>
-                    <div class="tickets__button">
-                        <a target="_blank" href="https://www.ticketportal.cz/event/DOZVUKY-LETA-2023?IDPartner=338#fullscreen-search" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
-                    </div>
-                    <div class="grid">
-                        <div class="grid__col col-6-12@md col-4-12@lg">
-                            <div class="tickets__steps">
-                                <h4 class="tickets__step-title">1. Klikni na odkaz {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "ticket" }} %}</h4>
-                                <div class="tickets__step-content">
-                                    <p>Klikni na odkaz výše a dostaň se na stránku ticketportal, kde můžeš koupit lístek na festival.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid__col col-6-12@md col-4-12@lg">
-                            <div class="tickets__steps">
-                                <h4 class="tickets__step-title">2. Platba {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "pay" }} %}</h4>
-                                <div class="tickets__step-content">
-                                    <p>Vyber si platbu a následně proveď úhradu. Část tvé vstupenky půjde na dobrou věc!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid__col col-6-12@md col-4-12@lg">
-                            <div class="tickets__steps">
-                                <h4 class="tickets__step-title">3. Doraž {% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "party" }} %}</h4>
-                                <div class="tickets__step-content">
-                                    <p>Už zbývá jenom dorazit. Budeme se těšit. Vše vypukne 1.9.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> #}
         {# SEKCE NOVINKY PROZATÍM SCHOVANÁ #}
         {# <section class="section section--top section--bottom" id="novinky">
             <div class="container">
