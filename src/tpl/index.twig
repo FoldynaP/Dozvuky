@@ -52,7 +52,7 @@
                 }} %}
                 <div class="tickets">
                     <div class="tickets__title">
-                        <h4 class="u-text-center">Aktuálně probíhá první vlna prodeje lístků. Neotálejte a kupte si lístek za výhodnou cenu!</h4>
+                        <h4 class="u-text-center">Aktuálně probíhá druhá vlna prodeje lístků. Neotálejte a kupte si lístek za výhodnou cenu!</h4>
                     </div>
                     <div class="tickets__button">
                         <a target="_blank" href="https://www.ticketportal.cz/event/DOZVUKY-LETA-2024?idp=1388053#modalVyberPocetMiest20" class="btn-glitch" role="button"><span class="btn-glitch__text">Koupit lístek</span></a>
@@ -89,100 +89,49 @@
         <section class="section section--top section--bottom">
             <div class="container">
                 {% include "@components/core/title/title.twig" with { props: {
-                    title: "Kapely ročníku 2023",
+                    title: "Na co se můžete těšit?",
                     tag: "h2",
                 }} %}
                 {% set bands = [
                     {
-                        img: "bands/12_Marpo.webp",
-                        alt: "Marpo & kapela TroubleGang",
-                        title: "Marpo & kapela TroubleGang",
-                        link: "/kapely/marpo",
-                        description: "Marpo, vlastním jménem Otakar Petřina, se věnuje muzice už od dětství, kdy si koupil mikrofon a svoji tvorbu zaznamenával na magnetofon. Postupně nahrával svá alba s různými interprety, jako jsou například Gipsy, MC Wohnout nebo Hugo Toxxx. Založil kapelu TroubleGang a zároveň od roku 2008 bubnoval ve skupině Chinaski. Po personálním zemětřesení ",
+                        img: "bands/1-harlej.webp",
+                        alt: "Harlej",
+                        link: "/kapely/harlej",
+                        description: "Harlej jsou česká rocková kapela, která vznikla na jaře roku 1995 v Praze. 
+S hitovými písněmi a charismatickými živými vystoupeními si získali srdce fanoušků a věřím, že neexistuje člověk, co by neznal aspoň jednu z jejich písní. 
+Harlej mají za sebou několik DVD, nespočet vydaných alb a posledním z nich je letošní album nesoucí název “Zatím je to dobrý”.  "
                     },
                     {
-                        img: "bands/10_MIchalHruza.webp",
-                        alt: "Michal Hrůza & kapela Hrůzy",
-                        title: "Michal Hrůza & kapela Hrůzy",
-                        link: "/kapely/michalhruza",
-                        description: "Michal Hrůza je český zpěvák a zakládající člen skupiny Ready Kirken. Hudbě se začal věnovat na střední vojenské škole, kde byl členem školní hudební skupiny a kde hrál amatérské divadlo. Jeho skladba pro Anetu Langerovou Voda živá byla v letech 2005 a 2006 hitem roku",
+                        img: "bands/2-nickhillson.webp",
+                        alt: "Nick Hillson",
+                        link: "/kapely/nickhillson",
                     },
                     {
-                        img: "bands/04_Paulie Garand.webp",
-                        alt: "Paulie Garand",
-                        title: "Paulie Garand",
-                        link: "/kapely/pauliegarand",
-                        description: "Za tímto interpretem, který vystoupí v rámci pátečního programu festivalu Dozvuky léta 2023, stojí historie sahající až do roku 2006, kdy se po pár letech tvoření hudby do šuplíku poprvé zapsal do širšího povědomí demem Mozoly, které následovala éra s kapelou BPM",
-                    },
-                    {
-                        img: "bands/01_Strasni banani.webp",
-                        alt: "Strašný Banáni",
-                        title: "Strašný Banáni",
-                        link: "/kapely/strasnybanani",
-                        description: "Představujeme vám kapelu, která letos otevře náš festival. Banáni jsou opravdovým přírodním antidepresivem především co se týká podpory tvorby serotoninu, jsou mezi ovocem skutečnými favority. ",
-                    },
-                    {
-                        img: "bands/11_TheAttics.webp",
-                        alt: "The Attics",
-                        title: "The Attics",
-                        link: "/kapely/theattics",
-                        description: "Českotřebovská rocková kapela, mající též kořeny pevně zakotvené v nedalekém Rybníku, vystoupí na Dozvucích léta již po třetí. Z původní odpolední akustické session se kluci přesunou do nočních hodin, kde, již s kompletní elektrickou výbavou, vám zahrají jejich nové skladby, a také něco málo od rockových legend typu Red Hot Chilli Peppers, Foo fighters…",
-                    },
-                    {
-                        img: "bands/02_INST60.webp",
-                        alt: "INST60",
-                        title: "INST60",
-                        link: "/kapely/inst60",
-                        description: "Místní kapela INST60 se pohybuje někde mezi popem a rockem, soustředí se výhradně na vlastní tvorbu s texty v angličtině. Od roku 2018 hraje ve složení Bohi - klávesy a zpěv, Ivoš - baskytara, Majkl - bubny, Fána K. - kytara, Honza N. - kytara. Historie kapely sice sahá až do roku 2002",
-                    },
-                    {
-                        img: "bands/03_Jamaron.webp",
-                        alt: "Jamaron",
-                        title: "Jamaron",
-                        link: "/kapely/jamaron",
-                        description: "Tato česká rocková kapela v čele s charismatickou frontwoman Marií Dostálovou, jejíž výrazný hlas obklopený hutným zvukem elektrických kytar a nekompromisních bicích je dominantou této mladé pětice. Jamaron si zakládají na srozumitelných a smysluplných českých textech, se kterými se řada posluchačů snadno ztotožní",
-                    },
-                    {
-                        img: "bands/05_Doga.webp",
-                        alt: "Doga",
-                        title: "Doga",
-                        link: "/kapely/doga",
-                        description: "Při tvorbě programu Dozvuky léta 2023 jsme mysleli také na fanoušky tvrdé hudby. Doga to je energií nabušený nekompromisní 100% live rock’n’roll. Pódia válcuje kapela už 35 let, za která má na svém kontě již 11 desek, z toho dvě zlaté a jednu platinovou. Dokonce si střihla i klip v Americe. ",
-                    },
-                    {
-                        img: "bands/06_375mnm.webp",
-                        alt: "375 metrů nad mořem",
-                        title: "375 metrů nad mořem",
-                        link: "/kapely/375mnm",
-                        description: "Poslední kapelou, která se představí v rámci prvního dne programu Dozvuků léta bude opět 375 metrů nad mořem. Jedná se o zábavovou, plesovou i svatební kapelu z České Třebové, ve složení Daniela Stránská, Natálie Burešová, Dominik Stránský, Tomáš Kupka a Jan Růžička. Kapela hraje covery i vlastní tvorbu.",
-                    },
-                    {
-                        img: "bands/07_TheExcited.webp",
-                        alt: "The Excited",
-                        title: "The Excited",
-                        link: "/kapely/theexcited",
-                        description: "Kapela The Excited byla založena roku 2020 vysokomýtským zpěvákem a multiinstrumentalistou Adamem Čuříkem. Kapela hrající poprock s autorskými texty v českém jazyce měla svůj první koncert rok po založení, a to prostřednictvím livestreamu v místním MKlubu. ",
-                    },
-                    {
-                        img: "bands/08_SafariExpres.webp",
-                        alt: "Safari Expres",
-                        title: "Safari Expres",
-                        link: "/kapely/safariexpres",
-                        description: "Původně brněnská kapela Skákající králíčci na přelomu roku dostala nový rytmický náboj třebovské krve a proměnila se tak doslova v brněnsko-třebovský fusion – nově však pod názvem Safari Express. Studentský léta jsou pryč, ale Safari Express zůstává věrný svým kořenům inspirovaným mňágovským rockem se ságem v zádech, který Vám tentokrát bude servírovat v nádražní baště republiky – České Třebové – na Dozvucích léta! ",
-                    },
-                    {
-                        img: "bands/09_AjBrix_AstroBoy.webp",
-                        alt: "AJ Brix & Astro Boy",
-                        title: "AJ Brix & Astro Boy",
+                        img: "bands/3-astroboy.webp",
+                        alt: "Astroboy & AJ Brix",
                         link: "/kapely/ajbrix&astroboy",
-                        description: "AJ Brix je charismatický mladý rapper, reprezentující hlas mladé generace. Velmi dobře zapadl do české rapové komunity, a to nejen oblibou u fanoušků, ale i u ostatních umělců. Mezi dosud nejúspěšnější singly AJ Brixe patří No Limit, který překonal hranici čtyř milionů streamů na Spotify (ve spolupráci s rapperem Earth) a track Nějaká doba, který se stal velmi populární u tvůrců a fanoušků na sociální síti TikTok. ",
+                        description: "Astro Boy je mladý nadějný umělec zaměřující se na rap, Pop, DNB. Momentálně čítá jeho základna víc než 30.000 posluchačů měsíčně na platformě Spotify a dalších streamovacích službách. Charismatický mladý rapper Aj Brix svou hudební kariéru odstartoval v roce 2021. Mimo jiné působí na sociálních sítích; jenom na instagramovém účtu má početnou základnu čítající na 119 tisíc fanoušků.",
                     },
                     {
-                        img: "bands/13_HusýKrk.webp",
-                        alt: "Husý krk",
-                        title: "Husý krk",
-                        link: "/kapely/husykrk",
-                        description: "Mladá kapela, jejíž členové pochází z údolí potoku Husí krk, si už třetím rokem hraje vlastními slovy „co chce“. Za sebou mají tito tři borci již vystoupení na PunkOff ve vodáckém tábořišti Cakle, DosiFestu ve Sloupnici, Přívratském vinobraní,  Festivalu mladých kapel v Sobkovicích a Benátské noci v Bystřeci.",
+                        img: "bands/4-imodium.webp",
+                        alt: "Imodium",
+                        link: "/kapely/imodium",
+                        description: "Imodium se po 5 letech vrací zpět na hudební scénu, před pár dny vydali nový singl “Lampy” a k němu i videoklip. Takže pro náš festival byli jasnou volbou ☝️ 
+🔥A pro ty, co je ještě neznají: Imodium jsou čtyřčlenná rocková kapela, která příští rok oslaví 20let. Předskakovali dokonce i několika celosvětově známým kapelám jako Simple Plan, Muse a dalším.. Kapela má na svém kontě i několik hudebních ocenění ať už v kategorii Objev roku, Videoklip roku nebo Hudební film roku. Na kontě mají také 5 vydaných alb a 2 koncertní záznamy, v roce 2024 vydají novou desku. ",
+                    },
+                    {
+                        img: "bands/5-375mnm.webp",
+                        alt: "375 metrů nad mořem",
+                        link: "/kapely/375mnm",
+                        description: "Kapelu 375 m.n.m. už asi nemusím nijak detailně představovat, svým skvělým energickým koncertem zakončovala všechny tři ročníky Dozvuků a příští ročník tomu nebude jinak. 375 je banda pěti členů z České Třebové - Danča, Mártty, Natálie, Janek a Tomáš. Hrají covery známých písní, ale také vlastní tvorbu. 
+Budeme se těšit! 🔥",
+                    },
+                    {
+                        img: "bands/6-impolite.webp",
+                        alt: "Impolite",
+                        link: "/kapely/impolite",
+                        description: "Kapela Impolite
+Původní záměr našeho shledání bylo odehrát pár letních koncertů pod sólistkou barborou k, ale všechno do sebe zapadlo natolik, že jsme se rozhodli vytvořit úplně nový projekt. Po malém přeskupení a roce vymýšlení názvu jsme konečně oficiální. Žánr, který nás asi nejvíce vystihuje je ‘emocionální pop/rock’. Elektrické kytary doprovází pestré vokální harmonie, jindy zase akustická kytara, piano, či housle. ",
                     },
                 ]%}
                 {% include "@components/box/carousel-band/carousel-band.twig" with { props: {

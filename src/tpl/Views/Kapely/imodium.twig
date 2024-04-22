@@ -1,0 +1,58 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Imodium' %}
+{% set description = 'Kapela Imodium předskakovali dokonce i několika celosvětově známým kapelám jako Simple Plan, Muse a dalším.. Kapela má na svém kontě i několik hudebních ocenění ať už v kategorii Objev roku, Videoklip roku nebo Hudební film roku. Na kontě mají také 5 vydaných alb a 2 koncertní záznamy, v roce 2024 vydají novou desku. ' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely",
+                    },
+                    {
+                        link: "Imodium",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/4-imodium.webp",
+                alt: "Imodium",
+                title: "Imodium",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Imodium",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>O kapele</h4>
+                    <p>Imodium se po 5 letech vrací zpět na hudební scénu, před pár dny vydali nový singl “Lampy” a k němu i videoklip. Takže pro náš festival byli jasnou volbou ☝️ 
+🔥A pro ty, co je ještě neznají: Imodium jsou čtyřčlenná rocková kapela, která příští rok oslaví 20let. Předskakovali dokonce i několika celosvětově známým kapelám jako Simple Plan, Muse a dalším.. Kapela má na svém kontě i několik hudebních ocenění ať už v kategorii Objev roku, Videoklip roku nebo Hudební film roku. Na kontě mají také 5 vydaných alb a 2 koncertní záznamy, v roce 2024 vydají novou desku. </p>
+                    <p>🔥Kluci se vrací v plné síle a zahrají pouze na pár exkluzivních festivalech a Dozvuky jsou jednimi z nich! 🔥</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.instagram.com/imodiumofficial/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

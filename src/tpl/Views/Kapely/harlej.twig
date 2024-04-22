@@ -1,0 +1,60 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Harlej' %}
+{% set description = 'Harlej jsou česká rocková kapela, která vznikla na jaře roku 1995 v Praze. 
+S hitovými písněmi a charismatickými živými vystoupeními si získali srdce fanoušků a věřím, že neexistuje člověk, co by neznal aspoň jednu z jejich písní.' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely",
+                    },
+                    {
+                        link: "Harlej",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/1-harlej.webp",
+                alt: "Harlej",
+                title: "Harlej",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Harlej",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>O kapele</h4>
+                    <p>Harlej jsou česká rocková kapela, která vznikla na jaře roku 1995 v Praze. 
+S hitovými písněmi a charismatickými živými vystoupeními si získali srdce fanoušků a věřím, že neexistuje člověk, co by neznal aspoň jednu z jejich písní. 
+Harlej mají za sebou několik DVD, nespočet vydaných alb a posledním z nich je letošní album nesoucí název “Zatím je to dobrý”. Víc už vám je představovat asi nemusím. </p>
+                    <p>Přijďte si je poslechnout a užít si jejich show s námi 🤘</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.instagram.com/harlej_official/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
