@@ -1,12 +1,72 @@
 {% extends '@layout/layout.twig' %}
 {% set pageTitle = 'Dozvuky léta - Nick Hillson' %}
-{% set description = 'Nick Hillson' %}
+{% set description = 'Nick Hillson je 26letý rapper a textař. Dlouhá léta se zkoušel prosadit sólově, ale v roce 2021 přišel zásadní zlom, kdy se díky dlouholetému kamarádovi Lukášovi Novotnému (DJ Orogo) spojil s nadaným muzikantem Petrem Kupkou (Bicí). Nyní již tato trojice 3 roky působí společně jako hiphopová crew, kde se Petr stal postupně hlavním hudebním producentem.' %}
 
 {% block content %}
 
 <main role="main" id="main" class="main">
-    <section class="section section--top section--bottom">
-        <div class="container"><h1>Informace o kapele Nick Hillson pro vás připravujeme</h1></div>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely",
+                    },
+                    {
+                        link: "Nick Hillson",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/2-nickhillson.webp",
+                alt: "Nick Hillson",
+                title: "Nick Hillson",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Nick Hillson",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Nick Hillson je 26letý rapper a textař. Dlouhá léta se zkoušel prosadit sólově, ale v roce 2021 přišel zásadní zlom, kdy se díky dlouholetému kamarádovi Lukášovi Novotnému (DJ Orogo) spojil s nadaným muzikantem Petrem Kupkou (Bicí). Nyní již tato trojice 3 roky působí společně jako hiphopová crew, kde se Petr stal postupně hlavním hudebním producentem. Rádi experimentují i s jinými žánry, do rapu přidávají např. rockové, punkové nebo popové prvky. Do širšího povědomí se Nick dostal díky singlu Jiří Denisa Procházka, který dokonce zazněl na brněnském náměstí při přivítání Jiřího Procházky, jakožto nového šampiona polotěžké váhy v MMA organizaci UFC.</p>
+                    {# <div class="blog__audio-section">
+                        <h4>Ukázka z tvorby:</h4>
+                        {% include "@components/box/audio/audio.twig" with { props: { 
+                            src: "https://audio.jukehost.co.uk/9enxXQaZQ4OAmD1FSxbyh4o17WdoNYX4",
+                            name: "Název písničky"
+                        }}%}                      
+                    </div> #}
+                    {# <div class="blog__audio-section u-pt-20">
+                        <h4>Ukázka z tvorby v2:</h4>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1452190555&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/h-ctor-guitarrista" title="Héctor Guitarrista 8" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/h-ctor-guitarrista/over-my-head" title="Over My Head - Sum 41 | Cover by Héctor Oliva" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+                    </div> #}
+                    {# <h4>Video ukázka:</h4>
+                    <div class="blog__video-section">
+                        {% include "@components/box/video/video.twig" with { props: { 
+                            link: "https://www.youtube.com/embed/_4C7Zr0qL8s" 
+                        }}%}
+                    </div> #}
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.instagram.com/Nick Hillsonking/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
