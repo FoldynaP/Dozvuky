@@ -1,0 +1,60 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Peladores' %}
+{% set description = ' Kapela Peladores je smíšená studentská kapela z třebovského gymnázia. Společně fungují od září roku 2022. Stali se tradiční součástí 
+gymnaziálních akcí a v září například zahajovali šestý ročník litomyšlské Spacák párty. Věnují se vlastní tvorbě, kterou doplňují pop-rockovými covery. 
+Od běžných kapel je odlišují housle, které pronikavým tónem rozbíjí tvrdý zvuk kytar, basy a bicích.' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely",
+                    },
+                    {
+                        link: "Peladores",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/12-peladores.webp",
+                alt: "Peladores",
+                title: "Peladores",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Peladores",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Kapela Peladores je smíšená studentská kapela z třebovského gymnázia. Společně fungují od září roku 2022. Stali se tradiční součástí gymnaziálních akcí a v září
+                     například zahajovali šestý ročník litomyšlské Spacák párty. Věnují se vlastní tvorbě, kterou doplňují pop-rockovými covery. Od běžných kapel je odlišují housle, 
+                    které pronikavým tónem rozbíjí tvrdý zvuk kytar, basy a bicích.</p>
+                </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.instagram.com/kapela_peladores/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "instagram" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -4,13 +4,9 @@
 
 {% set program = [
     {
-        img: "program/PATEK.webp",
-        title: "Pátek 01.09. 2023:",
+        img: "program/program.webp",
+        title: "Letošní program:",
     },
-    {
-        img: "program/Sobota.webp",
-        title: "Sobota 02.09. 2023:",
-    }
 ]%}
 
 {% block content %}
@@ -34,9 +30,6 @@
                 title: item.title,
                 tag: "h2",
             }} %}
-            {# {% include "@components/box/program-table/program-table.twig" with { props: {
-
-            }} %} #}
             <div class="program-wrap">
                 {% include "@components/core/image/image.twig" with { item: {
                     img: item.img,

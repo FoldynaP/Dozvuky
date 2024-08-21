@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: center;
     // background-color: #3333;
-    padding: 40px 0;
+    padding: 40px 0 100px;
     h4 {
         font-size: 20px;
     }
@@ -105,6 +105,14 @@
             width: auto;
             max-height: 70px;
         }
+        &--svg .image img {
+            width: 100%;
+            max-width: 160px;
+            max-height: unset;
+        }
+        &--white .footer__sponsor-image {
+            background-color: $colorWhite;
+        }
     }
     &__created {
         color: $colorBlack40;
@@ -116,10 +124,7 @@
     &__copyright {
         font-size: 14px;
         color: $colorBlack20;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -60px;
+        margin-top: 40px;
     }
     .hoverevents &__social-link:hover {
         border-color: $colorWhite;
@@ -131,5 +136,12 @@
     }
     @media ($mdUp) {
         padding: 80px 0;
+
+        &__copyright {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -60px;
+        }
     }
 }

@@ -1,0 +1,60 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Dozvuky léta - Strašný banáni' %}
+{% set description = 'Banáni jsou opravdovým přírodním antidepresivem. Co se týká podpory tvorby serotoninu, jsou mezi ovocem skutečnými favority. 
+ejich hudba baví, dává, rozesmívá a kope. Ale bacha - každý, kdo přišel na jejich koncert, už nikdy nebral život tak vážně!' %}
+
+{% block content %}
+
+<main role="main" id="main" class="main">
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/breadcrumbs/breadcrumbs.twig" with { props: {
+                items: [
+                    {
+                        link: "kapely",
+                        url: "/kapely",
+                    },
+                    {
+                        link: "Strašný banáni",
+                    }
+                ]
+            }} %}
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% include "@components/box/main-image/main-image.twig" with { props: {
+                img: "bands/9-strasnybanani.webp",
+                alt: "Strašný banáni",
+                title: "Strašný banáni",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--top">
+        <div class="container">
+            {% include "@components/core/title/title.twig" with { props: {
+                title: "Strašný banáni",
+                tag: "h2",
+            }} %}
+        </div>
+    </section>
+    <section class="section section--bottom">
+        <div class="container">
+            <div class="blog">
+                <div class="blog__text">
+                    <h4>Úvod o kapele</h4>
+                    <p>Banáni jsou opravdovým přírodním antidepresivem. Co se týká podpory tvorby serotoninu, jsou mezi ovocem skutečnými favority. Jejich hudba baví, dává, 
+                    rozesmívá a kope. Ale bacha - každý, kdo přišel na jejich koncert, 
+                    už nikdy nebral život tak vážně!</p>
+               </div>
+                <div class="blog__social">
+                    <span>Sociální sítě:</span>
+                    <a target="_blank" href="https://www.facebook.com/strasnybanani/" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "fb" }} %}</a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UChjL-FyQsAUlM-3C1K5-qaA" class="blog__social-item">{% include "@components/core/icon-svg/icon-svg.twig" with {props: { name: "yt" }} %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
